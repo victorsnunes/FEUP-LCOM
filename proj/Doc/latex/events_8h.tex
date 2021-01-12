@@ -1,0 +1,52 @@
+\hypertarget{events_8h}{}\doxysection{D\+:/\+Documentos/\+FEUP/3 ano/1 semestre/\+LCOM/g11/proj/events.h File Reference}
+\label{events_8h}\index{D:/Documentos/FEUP/3 ano/1 semestre/LCOM/g11/proj/events.h@{D:/Documentos/FEUP/3 ano/1 semestre/LCOM/g11/proj/events.h}}
+
+
+This file contains the definitions of the functions to implement the event handler.  
+
+
+{\ttfamily \#include $<$lcom/lcf.\+h$>$}\newline
+{\ttfamily \#include $<$lcom/liblm.\+h$>$}\newline
+{\ttfamily \#include $<$lcom/proj.\+h$>$}\newline
+{\ttfamily \#include $<$stdbool.\+h$>$}\newline
+{\ttfamily \#include $<$stdint.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}i8042.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}sprite.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}menu.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}scenario.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}character.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}mouse.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}mushroom.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}birds\+\_\+and\+\_\+crystals.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}letters\+\_\+and\+\_\+numbers.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}scoreboard.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}rtc.\+h\char`\"{}}\newline
+\doxysubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{events_8h_ae1530eae5079db496724a4857d911f09}\label{events_8h_ae1530eae5079db496724a4857d911f09}} 
+enum \mbox{\hyperlink{events_8h_ae1530eae5079db496724a4857d911f09}{Game\+Modes}} \{ \newline
+{\bfseries MENU\+\_\+\+SCREEN}
+, {\bfseries SCOREBOARD\+\_\+\+SCREEN}
+, {\bfseries INSTRUCTIONS\+\_\+\+SCREEN}
+, {\bfseries EXIT\+\_\+\+SCREEN}
+, \newline
+{\bfseries PLAYING\+\_\+\+SCREEN}
+, {\bfseries PAUSE\+\_\+\+SCREEN}
+, {\bfseries QUIT\+\_\+\+SCREEN}
+, {\bfseries GAMEOVER\+\_\+\+SCREEN}
+, \newline
+{\bfseries CLOSE\+\_\+\+GAME}
+ \}
+\begin{DoxyCompactList}\small\item\em enum defining the games mode \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{events_8h_ad03d38b728d8392ab0d9201950451788}\label{events_8h_ad03d38b728d8392ab0d9201950451788}} 
+void \mbox{\hyperlink{events_8h_ad03d38b728d8392ab0d9201950451788}{event\+\_\+handler}} ()
+\begin{DoxyCompactList}\small\item\em handler of the events, such as the ones from the keyboard, the mouse and the timer for each game modes \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This file contains the definitions of the functions to implement the event handler. 
+

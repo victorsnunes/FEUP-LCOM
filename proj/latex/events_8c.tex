@@ -1,0 +1,98 @@
+\hypertarget{events_8c}{}\doxysection{events.\+c File Reference}
+\label{events_8c}\index{events.c@{events.c}}
+
+
+This file contains the implementaion of the events handler.  
+
+
+{\ttfamily \#include \char`\"{}events.\+h\char`\"{}}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{events_8c_ad03d38b728d8392ab0d9201950451788}\label{events_8c_ad03d38b728d8392ab0d9201950451788}} 
+void \mbox{\hyperlink{events_8c_ad03d38b728d8392ab0d9201950451788}{event\+\_\+handler}} ()
+\begin{DoxyCompactList}\small\item\em handler of the events, such as the ones from the keyboard, the mouse and the timer for each game modes \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{events_8c_a79d6328e537809c6fda9bd0b80da91e4}\label{events_8c_a79d6328e537809c6fda9bd0b80da91e4}} 
+bool \mbox{\hyperlink{events_8c_a79d6328e537809c6fda9bd0b80da91e4}{timer\+\_\+event\+\_\+occurred}}
+\begin{DoxyCompactList}\small\item\em says if an event from the timer happened \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{events_8c_a176df39b779d3daea19f9619c54a461d}\label{events_8c_a176df39b779d3daea19f9619c54a461d}} 
+bool \mbox{\hyperlink{events_8c_a176df39b779d3daea19f9619c54a461d}{keyboard\+\_\+event\+\_\+occurred}}
+\begin{DoxyCompactList}\small\item\em says if an event from the keyboard happened \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{events_8c_a6f9a0b732d3e697122e27dd447567c09}\label{events_8c_a6f9a0b732d3e697122e27dd447567c09}} 
+bool \mbox{\hyperlink{events_8c_a6f9a0b732d3e697122e27dd447567c09}{mouse\+\_\+event\+\_\+occurred}}
+\begin{DoxyCompactList}\small\item\em says if an event from the mouse happened \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{events_8c_a9c6bdc4b28d4e8ac2a89fff54e2bfa69}\label{events_8c_a9c6bdc4b28d4e8ac2a89fff54e2bfa69}} 
+uint8\+\_\+t \mbox{\hyperlink{events_8c_a9c6bdc4b28d4e8ac2a89fff54e2bfa69}{player\+\_\+day}}
+\begin{DoxyCompactList}\small\item\em represents the day, given by the rtc \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{events_8c_a20a776201bf6da045b7d1f4afe9fe3c7}\label{events_8c_a20a776201bf6da045b7d1f4afe9fe3c7}} 
+uint8\+\_\+t \mbox{\hyperlink{events_8c_a20a776201bf6da045b7d1f4afe9fe3c7}{player\+\_\+month}}
+\begin{DoxyCompactList}\small\item\em represents the month, given by the rtc \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{events_8c_ad38d22e3d716dd8ff3b16a5b055253b8}\label{events_8c_ad38d22e3d716dd8ff3b16a5b055253b8}} 
+uint8\+\_\+t \mbox{\hyperlink{events_8c_ad38d22e3d716dd8ff3b16a5b055253b8}{player\+\_\+year}}
+\begin{DoxyCompactList}\small\item\em represents the year, given by the rtc \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{events_8c_a3973b5f6ada518b81524d5dfde6e2416}\label{events_8c_a3973b5f6ada518b81524d5dfde6e2416}} 
+uint8\+\_\+t \mbox{\hyperlink{events_8c_a3973b5f6ada518b81524d5dfde6e2416}{player\+\_\+hour}}
+\begin{DoxyCompactList}\small\item\em represents the hour, given by the rtc \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{events_8c_ad2b827dab83c13c4ccfa13514e24c2eb}{player\+\_\+minute}}
+\begin{DoxyCompactList}\small\item\em represents the minutes, given by the rtc \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{events_8c_a84d988de7be81ceabb64737f264b033c}\label{events_8c_a84d988de7be81ceabb64737f264b033c}} 
+uint8\+\_\+t {\bfseries key\+\_\+pressed}
+\item 
+\mbox{\Hypertarget{events_8c_a3b2e64ffb96c650d6525c99be01c7331}\label{events_8c_a3b2e64ffb96c650d6525c99be01c7331}} 
+struct packet {\bfseries mouse\+\_\+packet}
+\item 
+\mbox{\hyperlink{events_8h_ae1530eae5079db496724a4857d911f09}{Game\+Modes}} \mbox{\hyperlink{events_8c_abd71c3f8ef44bd4b48d44a2ba86fa129}{game\+\_\+mode}} = MENU\+\_\+\+SCREEN
+\begin{DoxyCompactList}\small\item\em initiates the game mode with the main menu screen \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{events_8c_a253082c0141d61fcdbb9e5afac6fce59}\label{events_8c_a253082c0141d61fcdbb9e5afac6fce59}} 
+\mbox{\hyperlink{struct_character}{Character}} $\ast$ {\bfseries dave}
+\item 
+\mbox{\Hypertarget{events_8c_a8a6bb85bf44d1392b588a65de57652c0}\label{events_8c_a8a6bb85bf44d1392b588a65de57652c0}} 
+\mbox{\hyperlink{struct_cursor}{Cursor}} $\ast$ {\bfseries cursor}
+\item 
+\mbox{\Hypertarget{events_8c_ac08575c375884f96fe2e0565754aae33}\label{events_8c_ac08575c375884f96fe2e0565754aae33}} 
+\mbox{\hyperlink{struct_crystal}{Crystal}} $\ast$ \mbox{\hyperlink{events_8c_ac08575c375884f96fe2e0565754aae33}{crystals}} \mbox{[}\mbox{\hyperlink{birds__and__crystals_8h_a278442ca3a4ed0d49874c8f08dd0a9fe}{MAX\+\_\+\+BIRDS\+\_\+\+AND\+\_\+\+CRYSTALS}}\mbox{]}
+\begin{DoxyCompactList}\small\item\em pointer to the array of crystals of the game \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{events_8c_a10e3d81edadeec0b9e23a1800de47d97}\label{events_8c_a10e3d81edadeec0b9e23a1800de47d97}} 
+unsigned int {\bfseries p\+\_\+counter} = 0
+\item 
+\mbox{\Hypertarget{events_8c_ae78958f6f4d3384a463561762c24dd3f}\label{events_8c_ae78958f6f4d3384a463561762c24dd3f}} 
+unsigned int \mbox{\hyperlink{events_8c_ae78958f6f4d3384a463561762c24dd3f}{player\+\_\+points}} = 0
+\begin{DoxyCompactList}\small\item\em contains the points of the player \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{events_8c_acf01a62111b056d929cadbcad68282d0}\label{events_8c_acf01a62111b056d929cadbcad68282d0}} 
+char \mbox{\hyperlink{events_8c_acf01a62111b056d929cadbcad68282d0}{player\+\_\+name}} \mbox{[}11\mbox{]} = \char`\"{}\char`\"{}
+\begin{DoxyCompactList}\small\item\em contains the name of the player \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{events_8c_aa4544b660086c0779c2689031e8a91f8}\label{events_8c_aa4544b660086c0779c2689031e8a91f8}} 
+unsigned int {\bfseries dead\+\_\+timer} = 0
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This file contains the implementaion of the events handler. 
+
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{events_8c_abd71c3f8ef44bd4b48d44a2ba86fa129}\label{events_8c_abd71c3f8ef44bd4b48d44a2ba86fa129}} 
+\index{events.c@{events.c}!game\_mode@{game\_mode}}
+\index{game\_mode@{game\_mode}!events.c@{events.c}}
+\doxysubsubsection{\texorpdfstring{game\_mode}{game\_mode}}
+{\footnotesize\ttfamily \mbox{\hyperlink{events_8h_ae1530eae5079db496724a4857d911f09}{Game\+Modes}} game\+\_\+mode = MENU\+\_\+\+SCREEN}
+
+
+
+initiates the game mode with the main menu screen 
+
+contain the game mode \mbox{\Hypertarget{events_8c_ad2b827dab83c13c4ccfa13514e24c2eb}\label{events_8c_ad2b827dab83c13c4ccfa13514e24c2eb}} 
+\index{events.c@{events.c}!player\_minute@{player\_minute}}
+\index{player\_minute@{player\_minute}!events.c@{events.c}}
+\doxysubsubsection{\texorpdfstring{player\_minute}{player\_minute}}
+{\footnotesize\ttfamily uint8\+\_\+t player\+\_\+minute\hspace{0.3cm}{\ttfamily [extern]}}
+
+
+
+represents the minutes, given by the rtc 
+
+represents the minutes, given by the rtc 

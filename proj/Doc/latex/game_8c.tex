@@ -1,0 +1,74 @@
+\hypertarget{game_8c}{}\doxysection{D\+:/\+Documentos/\+FEUP/3 ano/1 semestre/\+LCOM/g11/proj/game.c File Reference}
+\label{game_8c}\index{D:/Documentos/FEUP/3 ano/1 semestre/LCOM/g11/proj/game.c@{D:/Documentos/FEUP/3 ano/1 semestre/LCOM/g11/proj/game.c}}
+
+
+This file contains the implementation to start the game, containing the main loop.  
+
+
+{\ttfamily \#include \char`\"{}game.\+h\char`\"{}}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{game_8c_a94d15f07abafce7ee83bd9468836cf0b}\label{game_8c_a94d15f07abafce7ee83bd9468836cf0b}} 
+void \mbox{\hyperlink{game_8c_a94d15f07abafce7ee83bd9468836cf0b}{start\+\_\+dave\+\_\+the\+\_\+jumper}} ()
+\begin{DoxyCompactList}\small\item\em function that initializes all of the sprites and calls the main loop function \mbox{\hyperlink{game_8h_a7c0dfd6d419fb67565e597ba124f9a10}{game\+\_\+main\+\_\+loop()}} \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{game_8c_a7c0dfd6d419fb67565e597ba124f9a10}\label{game_8c_a7c0dfd6d419fb67565e597ba124f9a10}} 
+void \mbox{\hyperlink{game_8c_a7c0dfd6d419fb67565e597ba124f9a10}{game\+\_\+main\+\_\+loop}} ()
+\begin{DoxyCompactList}\small\item\em main loop of the game, using the driver receive funtion. Does the interruptions of the timer, keyboard and mouse. After the interruptions, calls the \mbox{\hyperlink{events_8c_ad03d38b728d8392ab0d9201950451788}{event\+\_\+handler()}} function if any event happened In the end of the loop, calls all of the \textquotesingle{}destroy\textquotesingle{} functions. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{game_8c_a0f08eb193e0aedb134a1481913b6a823}\label{game_8c_a0f08eb193e0aedb134a1481913b6a823}} 
+int {\bfseries timer\+\_\+counter}
+\item 
+\mbox{\Hypertarget{game_8c_a7462ac5b77041412235b8ff23f837808}\label{game_8c_a7462ac5b77041412235b8ff23f837808}} 
+uint8\+\_\+t {\bfseries key\+Scanned}
+\item 
+\mbox{\Hypertarget{game_8c_a79d6328e537809c6fda9bd0b80da91e4}\label{game_8c_a79d6328e537809c6fda9bd0b80da91e4}} 
+bool \mbox{\hyperlink{game_8c_a79d6328e537809c6fda9bd0b80da91e4}{timer\+\_\+event\+\_\+occurred}} = false
+\begin{DoxyCompactList}\small\item\em says if an event from the timer happened \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{game_8c_a176df39b779d3daea19f9619c54a461d}\label{game_8c_a176df39b779d3daea19f9619c54a461d}} 
+bool \mbox{\hyperlink{game_8c_a176df39b779d3daea19f9619c54a461d}{keyboard\+\_\+event\+\_\+occurred}} = false
+\begin{DoxyCompactList}\small\item\em says if an event from the keyboard happened \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{game_8c_a6f9a0b732d3e697122e27dd447567c09}\label{game_8c_a6f9a0b732d3e697122e27dd447567c09}} 
+bool \mbox{\hyperlink{game_8c_a6f9a0b732d3e697122e27dd447567c09}{mouse\+\_\+event\+\_\+occurred}} = false
+\begin{DoxyCompactList}\small\item\em says if an event from the mouse happened \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{game_8c_a84d988de7be81ceabb64737f264b033c}\label{game_8c_a84d988de7be81ceabb64737f264b033c}} 
+uint8\+\_\+t {\bfseries key\+\_\+pressed}
+\item 
+\mbox{\Hypertarget{game_8c_a16c31596e7e345ab03ffea3643fd2bdf}\label{game_8c_a16c31596e7e345ab03ffea3643fd2bdf}} 
+uint8\+\_\+t \mbox{\hyperlink{game_8c_a16c31596e7e345ab03ffea3643fd2bdf}{timer\+\_\+mask\+\_\+int}}
+\begin{DoxyCompactList}\small\item\em mask to the timer interrupt \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{game_8c_ae28c3318ab8bf773b8459d40552d3fb4}\label{game_8c_ae28c3318ab8bf773b8459d40552d3fb4}} 
+uint8\+\_\+t \mbox{\hyperlink{game_8c_ae28c3318ab8bf773b8459d40552d3fb4}{keyboard\+\_\+mask\+\_\+int}}
+\begin{DoxyCompactList}\small\item\em mask to the keyboard interrupt \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{game_8c_aee5a14c813cd70f682520ceaee1d3196}\label{game_8c_aee5a14c813cd70f682520ceaee1d3196}} 
+uint8\+\_\+t \mbox{\hyperlink{game_8c_aee5a14c813cd70f682520ceaee1d3196}{mouse\+\_\+mask\+\_\+int}}
+\begin{DoxyCompactList}\small\item\em mask to the mouse interrupt \end{DoxyCompactList}\item 
+\mbox{\hyperlink{events_8h_ae1530eae5079db496724a4857d911f09}{Game\+Modes}} \mbox{\hyperlink{game_8c_abd71c3f8ef44bd4b48d44a2ba86fa129}{game\+\_\+mode}}
+\begin{DoxyCompactList}\small\item\em contain the game mode \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{game_8c_a253082c0141d61fcdbb9e5afac6fce59}\label{game_8c_a253082c0141d61fcdbb9e5afac6fce59}} 
+\mbox{\hyperlink{struct_character}{Character}} $\ast$ {\bfseries dave} = NULL
+\item 
+\mbox{\Hypertarget{game_8c_a8a6bb85bf44d1392b588a65de57652c0}\label{game_8c_a8a6bb85bf44d1392b588a65de57652c0}} 
+\mbox{\hyperlink{struct_cursor}{Cursor}} $\ast$ {\bfseries cursor}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This file contains the implementation to start the game, containing the main loop. 
+
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{game_8c_abd71c3f8ef44bd4b48d44a2ba86fa129}\label{game_8c_abd71c3f8ef44bd4b48d44a2ba86fa129}} 
+\index{game.c@{game.c}!game\_mode@{game\_mode}}
+\index{game\_mode@{game\_mode}!game.c@{game.c}}
+\doxysubsubsection{\texorpdfstring{game\_mode}{game\_mode}}
+{\footnotesize\ttfamily \mbox{\hyperlink{events_8h_ae1530eae5079db496724a4857d911f09}{Game\+Modes}} game\+\_\+mode\hspace{0.3cm}{\ttfamily [extern]}}
+
+
+
+contain the game mode 
+
+contain the game mode 

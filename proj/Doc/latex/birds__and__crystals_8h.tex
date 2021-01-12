@@ -1,0 +1,257 @@
+\hypertarget{birds__and__crystals_8h}{}\doxysection{D\+:/\+Documentos/\+FEUP/3 ano/1 semestre/\+LCOM/g11/proj/birds\+\_\+and\+\_\+crystals.h File Reference}
+\label{birds__and__crystals_8h}\index{D:/Documentos/FEUP/3 ano/1 semestre/LCOM/g11/proj/birds\_and\_crystals.h@{D:/Documentos/FEUP/3 ano/1 semestre/LCOM/g11/proj/birds\_and\_crystals.h}}
+
+
+This file contains the definition of the functions to implement the birds flying with crystals that gives the player extra points.  
+
+
+{\ttfamily \#include $<$lcom/lcf.\+h$>$}\newline
+{\ttfamily \#include $<$lcom/liblm.\+h$>$}\newline
+{\ttfamily \#include $<$lcom/proj.\+h$>$}\newline
+{\ttfamily \#include $<$stdbool.\+h$>$}\newline
+{\ttfamily \#include $<$stdint.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$time.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}sprite.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Assets/\+Birds/\+Regular\+\_\+\+Bird/regular\+\_\+bird\+\_\+frame1.\+xpm\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Assets/\+Birds/\+Regular\+\_\+\+Bird/regular\+\_\+bird\+\_\+frame2.\+xpm\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Assets/\+Birds/\+Special\+\_\+\+Bird/special\+\_\+bird\+\_\+frame1.\+xpm\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Assets/\+Birds/\+Special\+\_\+\+Bird/special\+\_\+bird\+\_\+frame2.\+xpm\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Assets/\+Birds/\+Special\+\_\+\+Bird/special\+\_\+bird\+\_\+frame3.\+xpm\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Assets/\+Birds/\+Special\+\_\+\+Bird/special\+\_\+bird\+\_\+frame4.\+xpm\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Assets/\+Crystals/green\+\_\+crystal.\+xpm\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Assets/\+Crystals/red\+\_\+crystal.\+xpm\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Assets/\+Effects/effect1.\+xpm\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Assets/\+Effects/effect2.\+xpm\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Assets/\+Effects/effect3.\+xpm\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Assets/\+Effects/effect4.\+xpm\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Assets/\+Effects/effect5.\+xpm\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Assets/\+Effects/effect6.\+xpm\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Assets/\+Effects/effect7.\+xpm\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Assets/\+Effects/effect8.\+xpm\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Assets/\+Effects/effect9.\+xpm\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Assets/\+Effects/effect10.\+xpm\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Assets/\+Effects/effect11.\+xpm\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Assets/\+Effects/effect12.\+xpm\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Assets/\+Effects/effect13.\+xpm\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Assets/\+Effects/effect14.\+xpm\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Assets/\+Effects/effect15.\+xpm\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Assets/\+Effects/effect16.\+xpm\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Assets/\+Effects/effect17.\+xpm\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Assets/\+Effects/effect18.\+xpm\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Assets/\+Effects/effect19.\+xpm\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Assets/\+Effects/effect20.\+xpm\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Assets/\+Effects/effect21.\+xpm\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Assets/\+Effects/effect22.\+xpm\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Assets/\+Effects/effect23.\+xpm\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Assets/\+Effects/effect24.\+xpm\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Assets/\+Effects/effect25.\+xpm\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Assets/\+Effects/effect26.\+xpm\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Assets/\+Effects/effect27.\+xpm\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Assets/\+Effects/effect28.\+xpm\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Assets/\+Effects/effect29.\+xpm\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Assets/\+Effects/effect30.\+xpm\char`\"{}}\newline
+\doxysubsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_bird}{Bird}}
+\begin{DoxyCompactList}\small\item\em struct defining the Birds \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{struct_crystal}{Crystal}}
+\begin{DoxyCompactList}\small\item\em struct defining the Crystals \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{struct_shine___effect}{Shine\+\_\+\+Effect}}
+\begin{DoxyCompactList}\small\item\em struct defining the effects \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{birds__and__crystals_8h_a278442ca3a4ed0d49874c8f08dd0a9fe}\label{birds__and__crystals_8h_a278442ca3a4ed0d49874c8f08dd0a9fe}} 
+\#define \mbox{\hyperlink{birds__and__crystals_8h_a278442ca3a4ed0d49874c8f08dd0a9fe}{MAX\+\_\+\+BIRDS\+\_\+\+AND\+\_\+\+CRYSTALS}}~2
+\begin{DoxyCompactList}\small\item\em defines the max number of birds and crystals on the screen \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{birds__and__crystals_8h_a829706801ced0c04843d0bd8cc302a00}\label{birds__and__crystals_8h_a829706801ced0c04843d0bd8cc302a00}} 
+void \mbox{\hyperlink{birds__and__crystals_8h_a829706801ced0c04843d0bd8cc302a00}{initialize\+\_\+birds\+\_\+and\+\_\+crystals}} ()
+\begin{DoxyCompactList}\small\item\em Initializes the birds and the crystals. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{birds__and__crystals_8h_ae1996f1ecbd7897a111d034cfe819d5c}\label{birds__and__crystals_8h_ae1996f1ecbd7897a111d034cfe819d5c}} 
+void \mbox{\hyperlink{birds__and__crystals_8h_ae1996f1ecbd7897a111d034cfe819d5c}{initialize\+\_\+birds\+\_\+and\+\_\+crystals\+\_\+sprites}} ()
+\begin{DoxyCompactList}\small\item\em Initializes the sprites of the birds and the crystals. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{birds__and__crystals_8h_a13f2c2e52cd9ed2130648b1177d2b444}{bird\+\_\+out\+\_\+of\+\_\+range}} (\mbox{\hyperlink{struct_bird}{Bird}} $\ast$b)
+\begin{DoxyCompactList}\small\item\em returns if the bird is out of range \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{birds__and__crystals_8h_a48c9c226d24036b02322f7fab731aa8d}{crystal\+\_\+out\+\_\+of\+\_\+range}} (\mbox{\hyperlink{struct_crystal}{Crystal}} $\ast$c)
+\begin{DoxyCompactList}\small\item\em returns if the crystal is out of range \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_bird}{Bird}} $\ast$ \mbox{\hyperlink{birds__and__crystals_8h_a76ca7a4287f1b53aaeffc0bdff7042c7}{create\+\_\+bird}} (bool special)
+\begin{DoxyCompactList}\small\item\em creates a new bird \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_crystal}{Crystal}} $\ast$ \mbox{\hyperlink{birds__and__crystals_8h_adf7943ff01c1c969253fb1e8df6344e5}{create\+\_\+crystal}} (bool special)
+\begin{DoxyCompactList}\small\item\em creates a new crystal \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{birds__and__crystals_8h_a67929ece9ca102c9c420cc3a5865db65}\label{birds__and__crystals_8h_a67929ece9ca102c9c420cc3a5865db65}} 
+void \mbox{\hyperlink{birds__and__crystals_8h_a67929ece9ca102c9c420cc3a5865db65}{bird\+\_\+and\+\_\+crystal\+\_\+generator}} ()
+\begin{DoxyCompactList}\small\item\em generate a new bird with a crystal \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{birds__and__crystals_8h_a1370a536135f92ab56ad1b4aea16c0e5}{draw\+\_\+bird}} (\mbox{\hyperlink{struct_bird}{Bird}} $\ast$b, bool move)
+\begin{DoxyCompactList}\small\item\em draw a new bird, called by draw\+\_\+birds\+\_\+and\+\_\+crystals \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{birds__and__crystals_8h_a9fb539ae1b5ff5c51ba72894e2a9264b}{draw\+\_\+birds\+\_\+and\+\_\+crystals}} (bool move)
+\begin{DoxyCompactList}\small\item\em draw bird, crystal and the effects \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{birds__and__crystals_8h_a09ba26b672eac7c31b663790445f4c9a}{cursor\+\_\+over\+\_\+crystal}} (int x, int y, \mbox{\hyperlink{struct_crystal}{Crystal}} $\ast$c)
+\begin{DoxyCompactList}\small\item\em check if the cursor is over the crystal \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{birds__and__crystals_8h_a6fd54fd9297f63f57a5ed48bfdb2291d}{click\+\_\+on\+\_\+crystal}} (\mbox{\hyperlink{struct_crystal}{Crystal}} $\ast$c)
+\begin{DoxyCompactList}\small\item\em take the crystal of the screen and displays the effects after clicking in the crystal \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{birds__and__crystals_8h_a9cc7b7ee2d6e45ee7a1c0c95cf18ac79}\label{birds__and__crystals_8h_a9cc7b7ee2d6e45ee7a1c0c95cf18ac79}} 
+void \mbox{\hyperlink{birds__and__crystals_8h_a9cc7b7ee2d6e45ee7a1c0c95cf18ac79}{destroy\+\_\+birds\+\_\+and\+\_\+crystals}} ()
+\begin{DoxyCompactList}\small\item\em take the birds and the crystals of the arrays \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{birds__and__crystals_8h_a2bde4bd21e26dc776c944a1c73b8e8e2}\label{birds__and__crystals_8h_a2bde4bd21e26dc776c944a1c73b8e8e2}} 
+void \mbox{\hyperlink{birds__and__crystals_8h_a2bde4bd21e26dc776c944a1c73b8e8e2}{destroy\+\_\+birds\+\_\+and\+\_\+crystals\+\_\+sprites}} ()
+\begin{DoxyCompactList}\small\item\em destroy the sprites of the birds and the crystals \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{birds__and__crystals_8h_ac08575c375884f96fe2e0565754aae33}\label{birds__and__crystals_8h_ac08575c375884f96fe2e0565754aae33}} 
+\mbox{\hyperlink{struct_crystal}{Crystal}} $\ast$ \mbox{\hyperlink{birds__and__crystals_8h_ac08575c375884f96fe2e0565754aae33}{crystals}} \mbox{[}\mbox{\hyperlink{birds__and__crystals_8h_a278442ca3a4ed0d49874c8f08dd0a9fe}{MAX\+\_\+\+BIRDS\+\_\+\+AND\+\_\+\+CRYSTALS}}\mbox{]}
+\begin{DoxyCompactList}\small\item\em pointer to the array of crystals of the game \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This file contains the definition of the functions to implement the birds flying with crystals that gives the player extra points. 
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{birds__and__crystals_8h_a13f2c2e52cd9ed2130648b1177d2b444}\label{birds__and__crystals_8h_a13f2c2e52cd9ed2130648b1177d2b444}} 
+\index{birds\_and\_crystals.h@{birds\_and\_crystals.h}!bird\_out\_of\_range@{bird\_out\_of\_range}}
+\index{bird\_out\_of\_range@{bird\_out\_of\_range}!birds\_and\_crystals.h@{birds\_and\_crystals.h}}
+\doxysubsubsection{\texorpdfstring{bird\_out\_of\_range()}{bird\_out\_of\_range()}}
+{\footnotesize\ttfamily bool bird\+\_\+out\+\_\+of\+\_\+range (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_bird}{Bird}} $\ast$}]{b }\end{DoxyParamCaption})}
+
+
+
+returns if the bird is out of range 
+
+
+\begin{DoxyParams}{Parameters}
+{\em b} & is an object of of struct \mbox{\hyperlink{struct_bird}{Bird}} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if it is out of range, false otherwise 
+\end{DoxyReturn}
+\mbox{\Hypertarget{birds__and__crystals_8h_a6fd54fd9297f63f57a5ed48bfdb2291d}\label{birds__and__crystals_8h_a6fd54fd9297f63f57a5ed48bfdb2291d}} 
+\index{birds\_and\_crystals.h@{birds\_and\_crystals.h}!click\_on\_crystal@{click\_on\_crystal}}
+\index{click\_on\_crystal@{click\_on\_crystal}!birds\_and\_crystals.h@{birds\_and\_crystals.h}}
+\doxysubsubsection{\texorpdfstring{click\_on\_crystal()}{click\_on\_crystal()}}
+{\footnotesize\ttfamily void click\+\_\+on\+\_\+crystal (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_crystal}{Crystal}} $\ast$}]{c }\end{DoxyParamCaption})}
+
+
+
+take the crystal of the screen and displays the effects after clicking in the crystal 
+
+
+\begin{DoxyParams}{Parameters}
+{\em c} & is a object of struct \mbox{\hyperlink{struct_crystal}{Crystal}} \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{birds__and__crystals_8h_a76ca7a4287f1b53aaeffc0bdff7042c7}\label{birds__and__crystals_8h_a76ca7a4287f1b53aaeffc0bdff7042c7}} 
+\index{birds\_and\_crystals.h@{birds\_and\_crystals.h}!create\_bird@{create\_bird}}
+\index{create\_bird@{create\_bird}!birds\_and\_crystals.h@{birds\_and\_crystals.h}}
+\doxysubsubsection{\texorpdfstring{create\_bird()}{create\_bird()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_bird}{Bird}}$\ast$ create\+\_\+bird (\begin{DoxyParamCaption}\item[{bool}]{special }\end{DoxyParamCaption})}
+
+
+
+creates a new bird 
+
+
+\begin{DoxyParams}{Parameters}
+{\em special} & represents if the bird to be created should be normal or special \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a pointer to an object of struct \mbox{\hyperlink{struct_bird}{Bird}} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{birds__and__crystals_8h_adf7943ff01c1c969253fb1e8df6344e5}\label{birds__and__crystals_8h_adf7943ff01c1c969253fb1e8df6344e5}} 
+\index{birds\_and\_crystals.h@{birds\_and\_crystals.h}!create\_crystal@{create\_crystal}}
+\index{create\_crystal@{create\_crystal}!birds\_and\_crystals.h@{birds\_and\_crystals.h}}
+\doxysubsubsection{\texorpdfstring{create\_crystal()}{create\_crystal()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_crystal}{Crystal}}$\ast$ create\+\_\+crystal (\begin{DoxyParamCaption}\item[{bool}]{special }\end{DoxyParamCaption})}
+
+
+
+creates a new crystal 
+
+
+\begin{DoxyParams}{Parameters}
+{\em special} & represents if the crystal to be created should be normal or special \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a pointer to an object of struct \mbox{\hyperlink{struct_crystal}{Crystal}} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{birds__and__crystals_8h_a48c9c226d24036b02322f7fab731aa8d}\label{birds__and__crystals_8h_a48c9c226d24036b02322f7fab731aa8d}} 
+\index{birds\_and\_crystals.h@{birds\_and\_crystals.h}!crystal\_out\_of\_range@{crystal\_out\_of\_range}}
+\index{crystal\_out\_of\_range@{crystal\_out\_of\_range}!birds\_and\_crystals.h@{birds\_and\_crystals.h}}
+\doxysubsubsection{\texorpdfstring{crystal\_out\_of\_range()}{crystal\_out\_of\_range()}}
+{\footnotesize\ttfamily bool crystal\+\_\+out\+\_\+of\+\_\+range (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_crystal}{Crystal}} $\ast$}]{c }\end{DoxyParamCaption})}
+
+
+
+returns if the crystal is out of range 
+
+
+\begin{DoxyParams}{Parameters}
+{\em c} & is an object of struct \mbox{\hyperlink{struct_crystal}{Crystal}} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if it is out of range, false otherwise 
+\end{DoxyReturn}
+\mbox{\Hypertarget{birds__and__crystals_8h_a09ba26b672eac7c31b663790445f4c9a}\label{birds__and__crystals_8h_a09ba26b672eac7c31b663790445f4c9a}} 
+\index{birds\_and\_crystals.h@{birds\_and\_crystals.h}!cursor\_over\_crystal@{cursor\_over\_crystal}}
+\index{cursor\_over\_crystal@{cursor\_over\_crystal}!birds\_and\_crystals.h@{birds\_and\_crystals.h}}
+\doxysubsubsection{\texorpdfstring{cursor\_over\_crystal()}{cursor\_over\_crystal()}}
+{\footnotesize\ttfamily bool cursor\+\_\+over\+\_\+crystal (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{y,  }\item[{\mbox{\hyperlink{struct_crystal}{Crystal}} $\ast$}]{c }\end{DoxyParamCaption})}
+
+
+
+check if the cursor is over the crystal 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & Actual location of the mouse on x-\/axis \\
+\hline
+{\em y} & Actual location of the mouse on y-\/axis \\
+\hline
+{\em move} & true if it is moving, false otherwise \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the cursor is over the crystal, false otherwise 
+\end{DoxyReturn}
+\mbox{\Hypertarget{birds__and__crystals_8h_a1370a536135f92ab56ad1b4aea16c0e5}\label{birds__and__crystals_8h_a1370a536135f92ab56ad1b4aea16c0e5}} 
+\index{birds\_and\_crystals.h@{birds\_and\_crystals.h}!draw\_bird@{draw\_bird}}
+\index{draw\_bird@{draw\_bird}!birds\_and\_crystals.h@{birds\_and\_crystals.h}}
+\doxysubsubsection{\texorpdfstring{draw\_bird()}{draw\_bird()}}
+{\footnotesize\ttfamily void draw\+\_\+bird (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_bird}{Bird}} $\ast$}]{b,  }\item[{bool}]{move }\end{DoxyParamCaption})}
+
+
+
+draw a new bird, called by draw\+\_\+birds\+\_\+and\+\_\+crystals 
+
+
+\begin{DoxyParams}{Parameters}
+{\em b} & is a object ofstruct \mbox{\hyperlink{struct_bird}{Bird}} \\
+\hline
+{\em move} & true if it is moving, false otherwise \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{birds__and__crystals_8h_a9fb539ae1b5ff5c51ba72894e2a9264b}\label{birds__and__crystals_8h_a9fb539ae1b5ff5c51ba72894e2a9264b}} 
+\index{birds\_and\_crystals.h@{birds\_and\_crystals.h}!draw\_birds\_and\_crystals@{draw\_birds\_and\_crystals}}
+\index{draw\_birds\_and\_crystals@{draw\_birds\_and\_crystals}!birds\_and\_crystals.h@{birds\_and\_crystals.h}}
+\doxysubsubsection{\texorpdfstring{draw\_birds\_and\_crystals()}{draw\_birds\_and\_crystals()}}
+{\footnotesize\ttfamily void draw\+\_\+birds\+\_\+and\+\_\+crystals (\begin{DoxyParamCaption}\item[{bool}]{move }\end{DoxyParamCaption})}
+
+
+
+draw bird, crystal and the effects 
+
+
+\begin{DoxyParams}{Parameters}
+{\em move} & true if it is moving, false otherwise \\
+\hline
+\end{DoxyParams}

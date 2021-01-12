@@ -1,0 +1,85 @@
+\hypertarget{graphic_8h}{}\doxysection{D\+:/\+Documentos/\+FEUP/3 ano/1 semestre/\+LCOM/g11/proj/graphic.h File Reference}
+\label{graphic_8h}\index{D:/Documentos/FEUP/3 ano/1 semestre/LCOM/g11/proj/graphic.h@{D:/Documentos/FEUP/3 ano/1 semestre/LCOM/g11/proj/graphic.h}}
+
+
+definition of the code used to interact with the video card  
+
+
+{\ttfamily \#include $<$lcom/lcf.\+h$>$}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdbool.\+h$>$}\newline
+{\ttfamily \#include $<$minix/driver.\+h$>$}\newline
+{\ttfamily \#include $<$sys/mman.\+h$>$}\newline
+{\ttfamily \#include $<$machine/int86.\+h$>$}\newline
+{\ttfamily \#include $<$math.\+h$>$}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{graphic_8h_a726ddfe876cd6ffa8ebfcd92588ca7ae}{init\+\_\+mode}} (uint16\+\_\+t mode)
+\begin{DoxyCompactList}\small\item\em initialize mode \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{graphic_8h_a20adeb3fa5c43a7e3f8499e0a45bcdf2}{my\+\_\+get\+\_\+mode\+\_\+info}} (uint16\+\_\+t mode, vbe\+\_\+mode\+\_\+info\+\_\+t $\ast$mode\+\_\+info)
+\begin{DoxyCompactList}\small\item\em get information about the mode \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{graphic_8h_a6ec34b15f83103d49071ad91d87d0f88}{draw\+Pixel}} (uint16\+\_\+t x\+\_\+pos, uint16\+\_\+t y\+\_\+pos, uint32\+\_\+t color)
+\begin{DoxyCompactList}\small\item\em draw pixels \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{graphic_8h_ae11baadc27eeca45db4e448224cff0c1}\label{graphic_8h_ae11baadc27eeca45db4e448224cff0c1}} 
+void {\bfseries write\+\_\+buffer\+\_\+to\+\_\+videomem} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+definition of the code used to interact with the video card 
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{graphic_8h_a6ec34b15f83103d49071ad91d87d0f88}\label{graphic_8h_a6ec34b15f83103d49071ad91d87d0f88}} 
+\index{graphic.h@{graphic.h}!drawPixel@{drawPixel}}
+\index{drawPixel@{drawPixel}!graphic.h@{graphic.h}}
+\doxysubsubsection{\texorpdfstring{drawPixel()}{drawPixel()}}
+{\footnotesize\ttfamily int draw\+Pixel (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{x\+\_\+pos,  }\item[{uint16\+\_\+t}]{y\+\_\+pos,  }\item[{uint32\+\_\+t}]{color }\end{DoxyParamCaption})}
+
+
+
+draw pixels 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x\+\_\+pos} & position in the x-\/axis to draw \\
+\hline
+{\em y\+\_\+pos} & position in the y-\/axis to draw \\
+\hline
+{\em color} & color used to draw the pixel \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{graphic_8h_a726ddfe876cd6ffa8ebfcd92588ca7ae}\label{graphic_8h_a726ddfe876cd6ffa8ebfcd92588ca7ae}} 
+\index{graphic.h@{graphic.h}!init\_mode@{init\_mode}}
+\index{init\_mode@{init\_mode}!graphic.h@{graphic.h}}
+\doxysubsubsection{\texorpdfstring{init\_mode()}{init\_mode()}}
+{\footnotesize\ttfamily int init\+\_\+mode (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{mode }\end{DoxyParamCaption})}
+
+
+
+initialize mode 
+
+
+\begin{DoxyParams}{Parameters}
+{\em mode} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{graphic_8h_a20adeb3fa5c43a7e3f8499e0a45bcdf2}\label{graphic_8h_a20adeb3fa5c43a7e3f8499e0a45bcdf2}} 
+\index{graphic.h@{graphic.h}!my\_get\_mode\_info@{my\_get\_mode\_info}}
+\index{my\_get\_mode\_info@{my\_get\_mode\_info}!graphic.h@{graphic.h}}
+\doxysubsubsection{\texorpdfstring{my\_get\_mode\_info()}{my\_get\_mode\_info()}}
+{\footnotesize\ttfamily int my\+\_\+get\+\_\+mode\+\_\+info (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{mode,  }\item[{vbe\+\_\+mode\+\_\+info\+\_\+t $\ast$}]{mode\+\_\+info }\end{DoxyParamCaption})}
+
+
+
+get information about the mode 
+
+
+\begin{DoxyParams}{Parameters}
+{\em mode} & \\
+\hline
+{\em mode\+\_\+info} & information about the mode \\
+\hline
+\end{DoxyParams}

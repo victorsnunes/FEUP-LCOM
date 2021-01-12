@@ -1,0 +1,113 @@
+\hypertarget{graphic_8c}{}\doxysection{D\+:/\+Documentos/\+FEUP/3 ano/1 semestre/\+LCOM/g11/proj/graphic.c File Reference}
+\label{graphic_8c}\index{D:/Documentos/FEUP/3 ano/1 semestre/LCOM/g11/proj/graphic.c@{D:/Documentos/FEUP/3 ano/1 semestre/LCOM/g11/proj/graphic.c}}
+
+
+Code used to interact with the video card.  
+
+
+{\ttfamily \#include \char`\"{}graphic.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}lcom/vbe.\+h\char`\"{}}\newline
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{graphic_8c_aa0300eb67763c7b0e038f6486a31df07}\label{graphic_8c_aa0300eb67763c7b0e038f6486a31df07}} 
+\#define {\bfseries VBE\+\_\+\+FUNCTION}~0x4\+F00
+\item 
+\mbox{\Hypertarget{graphic_8c_a2ecbf8f92f9322fedec91461747c4843}\label{graphic_8c_a2ecbf8f92f9322fedec91461747c4843}} 
+\#define {\bfseries VBE\+\_\+\+MODE\+\_\+\+INFO}~0x01
+\item 
+\mbox{\Hypertarget{graphic_8c_a02477c4996ff058aee590b54f2146eb5}\label{graphic_8c_a02477c4996ff058aee590b54f2146eb5}} 
+\#define {\bfseries VBE\+\_\+\+SET\+\_\+\+MODE}~0x02
+\item 
+\mbox{\Hypertarget{graphic_8c_afeeffe52c8fd59db7c61cf8b02042dbf}\label{graphic_8c_afeeffe52c8fd59db7c61cf8b02042dbf}} 
+\#define {\bfseries INT}~0x10
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{graphic_8c_a726ddfe876cd6ffa8ebfcd92588ca7ae}{init\+\_\+mode}} (uint16\+\_\+t mode)
+\begin{DoxyCompactList}\small\item\em initialize mode \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{graphic_8c_aa6c1ff5024cd4d15e476bce487584daa}\label{graphic_8c_aa6c1ff5024cd4d15e476bce487584daa}} 
+void $\ast$() {\bfseries vg\+\_\+init} (uint16\+\_\+t mode)
+\item 
+int \mbox{\hyperlink{graphic_8c_a20adeb3fa5c43a7e3f8499e0a45bcdf2}{my\+\_\+get\+\_\+mode\+\_\+info}} (uint16\+\_\+t mode, vbe\+\_\+mode\+\_\+info\+\_\+t $\ast$mode\+\_\+info)
+\begin{DoxyCompactList}\small\item\em get information about the mode \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{graphic_8c_a6091a4bd04596e6e8e39b7dee1e1b118}{draw\+Pixel}} (uint16\+\_\+t x, uint16\+\_\+t y, uint32\+\_\+t color)
+\begin{DoxyCompactList}\small\item\em draw pixels \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{graphic_8c_ae11baadc27eeca45db4e448224cff0c1}\label{graphic_8c_ae11baadc27eeca45db4e448224cff0c1}} 
+void {\bfseries write\+\_\+buffer\+\_\+to\+\_\+videomem} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{graphic_8c_abc3c784566289e1414929d23e32a0c6c}\label{graphic_8c_abc3c784566289e1414929d23e32a0c6c}} 
+uint16\+\_\+t {\bfseries hres}
+\item 
+\mbox{\Hypertarget{graphic_8c_a573eca15e5986d6dd7ae53b5dab582e2}\label{graphic_8c_a573eca15e5986d6dd7ae53b5dab582e2}} 
+uint16\+\_\+t {\bfseries vres}
+\item 
+\mbox{\Hypertarget{graphic_8c_a36b87dc42923f704d16a629834a21b1e}\label{graphic_8c_a36b87dc42923f704d16a629834a21b1e}} 
+uint8\+\_\+t {\bfseries bytes\+\_\+per\+\_\+pixel}
+\item 
+\mbox{\Hypertarget{graphic_8c_a17b12b87c65aaa04215d9bdb7e9e84dd}\label{graphic_8c_a17b12b87c65aaa04215d9bdb7e9e84dd}} 
+unsigned int {\bfseries vram\+\_\+size}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Code used to interact with the video card. 
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{graphic_8c_a6091a4bd04596e6e8e39b7dee1e1b118}\label{graphic_8c_a6091a4bd04596e6e8e39b7dee1e1b118}} 
+\index{graphic.c@{graphic.c}!drawPixel@{drawPixel}}
+\index{drawPixel@{drawPixel}!graphic.c@{graphic.c}}
+\doxysubsubsection{\texorpdfstring{drawPixel()}{drawPixel()}}
+{\footnotesize\ttfamily int draw\+Pixel (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{x\+\_\+pos,  }\item[{uint16\+\_\+t}]{y\+\_\+pos,  }\item[{uint32\+\_\+t}]{color }\end{DoxyParamCaption})}
+
+
+
+draw pixels 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x\+\_\+pos} & position in the x-\/axis to draw \\
+\hline
+{\em y\+\_\+pos} & position in the y-\/axis to draw \\
+\hline
+{\em color} & color used to draw the pixel \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{graphic_8c_a726ddfe876cd6ffa8ebfcd92588ca7ae}\label{graphic_8c_a726ddfe876cd6ffa8ebfcd92588ca7ae}} 
+\index{graphic.c@{graphic.c}!init\_mode@{init\_mode}}
+\index{init\_mode@{init\_mode}!graphic.c@{graphic.c}}
+\doxysubsubsection{\texorpdfstring{init\_mode()}{init\_mode()}}
+{\footnotesize\ttfamily int init\+\_\+mode (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{mode }\end{DoxyParamCaption})}
+
+
+
+initialize mode 
+
+
+\begin{DoxyParams}{Parameters}
+{\em mode} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{graphic_8c_a20adeb3fa5c43a7e3f8499e0a45bcdf2}\label{graphic_8c_a20adeb3fa5c43a7e3f8499e0a45bcdf2}} 
+\index{graphic.c@{graphic.c}!my\_get\_mode\_info@{my\_get\_mode\_info}}
+\index{my\_get\_mode\_info@{my\_get\_mode\_info}!graphic.c@{graphic.c}}
+\doxysubsubsection{\texorpdfstring{my\_get\_mode\_info()}{my\_get\_mode\_info()}}
+{\footnotesize\ttfamily int my\+\_\+get\+\_\+mode\+\_\+info (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{mode,  }\item[{vbe\+\_\+mode\+\_\+info\+\_\+t $\ast$}]{mode\+\_\+info }\end{DoxyParamCaption})}
+
+
+
+get information about the mode 
+
+
+\begin{DoxyParams}{Parameters}
+{\em mode} & \\
+\hline
+{\em mode\+\_\+info} & information about the mode \\
+\hline
+\end{DoxyParams}

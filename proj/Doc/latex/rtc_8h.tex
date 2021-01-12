@@ -1,0 +1,119 @@
+\hypertarget{rtc_8h}{}\doxysection{D\+:/\+Documentos/\+FEUP/3 ano/1 semestre/\+LCOM/g11/proj/rtc.h File Reference}
+\label{rtc_8h}\index{D:/Documentos/FEUP/3 ano/1 semestre/LCOM/g11/proj/rtc.h@{D:/Documentos/FEUP/3 ano/1 semestre/LCOM/g11/proj/rtc.h}}
+
+
+This file contains the definition of implementation of the rtc, used to get the day and time the game was played, along with some macros.  
+
+
+{\ttfamily \#include $<$lcom/lcf.\+h$>$}\newline
+{\ttfamily \#include $<$lcom/liblm.\+h$>$}\newline
+{\ttfamily \#include $<$lcom/proj.\+h$>$}\newline
+{\ttfamily \#include $<$stdbool.\+h$>$}\newline
+{\ttfamily \#include $<$stdint.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}utils.\+h\char`\"{}}\newline
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{rtc_8h_a4e22feb6ffbc1cda32fadff5c740dc51}\label{rtc_8h_a4e22feb6ffbc1cda32fadff5c740dc51}} 
+\#define {\bfseries RTC\+\_\+\+IRQ}~8  /$\ast$$\ast$ $<$@brief RTC IRQ line $\ast$/
+\item 
+\mbox{\Hypertarget{rtc_8h_a710b98232df2c563009e6f8a6cd18220}\label{rtc_8h_a710b98232df2c563009e6f8a6cd18220}} 
+\#define {\bfseries RTC\+\_\+\+ADDR\+\_\+\+REG}~0x70 /$\ast$$\ast$ $<$@brief RTC Address Port $\ast$$\ast$/
+\item 
+\mbox{\Hypertarget{rtc_8h_a2f258a00c59c3f347c8d2d4a75471ce0}\label{rtc_8h_a2f258a00c59c3f347c8d2d4a75471ce0}} 
+\#define {\bfseries RTC\+\_\+\+DATA\+\_\+\+REG}~0x71 /$\ast$$\ast$ $<$@brief RTC Data Port $\ast$$\ast$/
+\item 
+\mbox{\Hypertarget{rtc_8h_ae5ffad506b363f28bed1bb5e5926bd2d}\label{rtc_8h_ae5ffad506b363f28bed1bb5e5926bd2d}} 
+\#define {\bfseries RTC\+\_\+\+REG\+\_\+A}~10
+\item 
+\mbox{\Hypertarget{rtc_8h_a03954a63ead3f02b7790ce79e9877eea}\label{rtc_8h_a03954a63ead3f02b7790ce79e9877eea}} 
+\#define {\bfseries RTC\+\_\+\+REG\+\_\+B}~11
+\item 
+\mbox{\Hypertarget{rtc_8h_a212d0f839f6f7ca43ccde311f93d5892}\label{rtc_8h_a212d0f839f6f7ca43ccde311f93d5892}} 
+\#define {\bfseries HOURS}~0x04
+\item 
+\mbox{\Hypertarget{rtc_8h_a84be9dcfa5a172ee83121620d15c8e29}\label{rtc_8h_a84be9dcfa5a172ee83121620d15c8e29}} 
+\#define {\bfseries MINUTES}~0x02
+\item 
+\mbox{\Hypertarget{rtc_8h_a48fcf4f2eeef6769d588168d4ac2ab0e}\label{rtc_8h_a48fcf4f2eeef6769d588168d4ac2ab0e}} 
+\#define {\bfseries SECONDS}~0x00
+\item 
+\mbox{\Hypertarget{rtc_8h_a509a01c55cbe47386fe24602b7c7fda1}\label{rtc_8h_a509a01c55cbe47386fe24602b7c7fda1}} 
+\#define {\bfseries DAY}~0x07
+\item 
+\mbox{\Hypertarget{rtc_8h_a3729d06495d9713592f79f3122c9e677}\label{rtc_8h_a3729d06495d9713592f79f3122c9e677}} 
+\#define {\bfseries MONTH}~0x08
+\item 
+\mbox{\Hypertarget{rtc_8h_a5871356500f559add06ea81d60331b1b}\label{rtc_8h_a5871356500f559add06ea81d60331b1b}} 
+\#define {\bfseries YEAR}~0x09
+\item 
+\mbox{\Hypertarget{rtc_8h_a6f00fd419d71ad37d585e1196d112683}\label{rtc_8h_a6f00fd419d71ad37d585e1196d112683}} 
+\#define {\bfseries RTC\+\_\+\+BIT\+\_\+\+DM}~BIT(2)
+\item 
+\mbox{\Hypertarget{rtc_8h_a2ebe3d816d8b2e9f1be075554e4135b3}\label{rtc_8h_a2ebe3d816d8b2e9f1be075554e4135b3}} 
+\#define {\bfseries RTC\+\_\+\+UIP}~BIT(7)
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{rtc_8h_a1fe1100ebe9891f425bd9ab9ececb327}{read\+\_\+register}} ()
+\begin{DoxyCompactList}\small\item\em This functions reads a register from the RTC. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{rtc_8h_a91994172a375afa5dfd71c7ee92e93a1}{is\+BCD}} ()
+\begin{DoxyCompactList}\small\item\em This function checks if the RTC is in the BCD format. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{rtc_8h_afc881a018edf34d327081ee6f8110a75}{bcd\+\_\+to\+\_\+dec}} (uint8\+\_\+t $\ast$bcd)
+\begin{DoxyCompactList}\small\item\em if the RTC is in BCD format,the function convert it to decimal \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{rtc_8h_affb6f9c7b2c1d585677a5bba1da35c06}\label{rtc_8h_affb6f9c7b2c1d585677a5bba1da35c06}} 
+void \mbox{\hyperlink{rtc_8h_affb6f9c7b2c1d585677a5bba1da35c06}{get\+Date}} ()
+\begin{DoxyCompactList}\small\item\em gets the current date from the RTC in binary. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{rtc_8h_a1c7c164fd3c7dea7004ece3c6251fc94}\label{rtc_8h_a1c7c164fd3c7dea7004ece3c6251fc94}} 
+void \mbox{\hyperlink{rtc_8h_a1c7c164fd3c7dea7004ece3c6251fc94}{get\+Time}} ()
+\begin{DoxyCompactList}\small\item\em gets the current time from the RTC in binary. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This file contains the definition of implementation of the rtc, used to get the day and time the game was played, along with some macros. 
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{rtc_8h_afc881a018edf34d327081ee6f8110a75}\label{rtc_8h_afc881a018edf34d327081ee6f8110a75}} 
+\index{rtc.h@{rtc.h}!bcd\_to\_dec@{bcd\_to\_dec}}
+\index{bcd\_to\_dec@{bcd\_to\_dec}!rtc.h@{rtc.h}}
+\doxysubsubsection{\texorpdfstring{bcd\_to\_dec()}{bcd\_to\_dec()}}
+{\footnotesize\ttfamily void bcd\+\_\+to\+\_\+dec (\begin{DoxyParamCaption}\item[{uint8\+\_\+t $\ast$}]{bcd }\end{DoxyParamCaption})}
+
+
+
+if the RTC is in BCD format,the function convert it to decimal 
+
+
+\begin{DoxyParams}{Parameters}
+{\em bcd} & Number in BCD format to be converted \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{rtc_8h_a91994172a375afa5dfd71c7ee92e93a1}\label{rtc_8h_a91994172a375afa5dfd71c7ee92e93a1}} 
+\index{rtc.h@{rtc.h}!isBCD@{isBCD}}
+\index{isBCD@{isBCD}!rtc.h@{rtc.h}}
+\doxysubsubsection{\texorpdfstring{isBCD()}{isBCD()}}
+{\footnotesize\ttfamily bool is\+BCD (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+This function checks if the RTC is in the BCD format. 
+
+\begin{DoxyReturn}{Returns}
+int true in case of success, false otherwise 
+\end{DoxyReturn}
+\mbox{\Hypertarget{rtc_8h_a1fe1100ebe9891f425bd9ab9ececb327}\label{rtc_8h_a1fe1100ebe9891f425bd9ab9ececb327}} 
+\index{rtc.h@{rtc.h}!read\_register@{read\_register}}
+\index{read\_register@{read\_register}!rtc.h@{rtc.h}}
+\doxysubsubsection{\texorpdfstring{read\_register()}{read\_register()}}
+{\footnotesize\ttfamily int read\+\_\+register (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+This functions reads a register from the RTC. 
+
+\begin{DoxyReturn}{Returns}
+int 0 in case of success, 1 otherwise 
+\end{DoxyReturn}

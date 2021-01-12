@@ -1,0 +1,39 @@
+\hypertarget{proj_8c}{}\doxysection{proj.\+c File Reference}
+\label{proj_8c}\index{proj.c@{proj.c}}
+
+
+This file contains the main loop of the game.  
+
+
+{\ttfamily \#include $<$lcom/lcf.\+h$>$}\newline
+{\ttfamily \#include $<$lcom/liblm.\+h$>$}\newline
+{\ttfamily \#include $<$lcom/proj.\+h$>$}\newline
+{\ttfamily \#include $<$stdbool.\+h$>$}\newline
+{\ttfamily \#include $<$stdint.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}game.\+h\char`\"{}}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{proj_8c_a0ddf1224851353fc92bfbff6f499fa97}\label{proj_8c_a0ddf1224851353fc92bfbff6f499fa97}} 
+int {\bfseries main} (int argc, char $\ast$argv\mbox{[}$\,$\mbox{]})
+\item 
+\mbox{\Hypertarget{proj_8c_a2a16f651eccbd248e1ad3b3b924b143b}\label{proj_8c_a2a16f651eccbd248e1ad3b3b924b143b}} 
+int() \mbox{\hyperlink{proj_8c_a2a16f651eccbd248e1ad3b3b924b143b}{proj\+\_\+main\+\_\+loop}} (int argc, char $\ast$argv\mbox{[}$\,$\mbox{]})
+\begin{DoxyCompactList}\small\item\em This function is responsible to call the function that starts the game, \mbox{\hyperlink{game_8c_a94d15f07abafce7ee83bd9468836cf0b}{start\+\_\+dave\+\_\+the\+\_\+jumper()}}. Is also responsable to subscribe and unsubscribe the timer, keyboard and mouse. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{proj_8c_a16c31596e7e345ab03ffea3643fd2bdf}\label{proj_8c_a16c31596e7e345ab03ffea3643fd2bdf}} 
+uint8\+\_\+t \mbox{\hyperlink{proj_8c_a16c31596e7e345ab03ffea3643fd2bdf}{timer\+\_\+mask\+\_\+int}} = 0
+\begin{DoxyCompactList}\small\item\em mask to the timer interrupt \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{proj_8c_ae28c3318ab8bf773b8459d40552d3fb4}\label{proj_8c_ae28c3318ab8bf773b8459d40552d3fb4}} 
+uint8\+\_\+t \mbox{\hyperlink{proj_8c_ae28c3318ab8bf773b8459d40552d3fb4}{keyboard\+\_\+mask\+\_\+int}} = 1
+\begin{DoxyCompactList}\small\item\em mask to the keyboard interrupt \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{proj_8c_aee5a14c813cd70f682520ceaee1d3196}\label{proj_8c_aee5a14c813cd70f682520ceaee1d3196}} 
+uint8\+\_\+t \mbox{\hyperlink{proj_8c_aee5a14c813cd70f682520ceaee1d3196}{mouse\+\_\+mask\+\_\+int}} = 2
+\begin{DoxyCompactList}\small\item\em mask to the mouse interrupt \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This file contains the main loop of the game. 
+

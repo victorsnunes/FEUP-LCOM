@@ -1,0 +1,216 @@
+\hypertarget{sprite_8h}{}\doxysection{D\+:/\+Documentos/\+FEUP/3 ano/1 semestre/\+LCOM/g11/proj/sprite.h File Reference}
+\label{sprite_8h}\index{D:/Documentos/FEUP/3 ano/1 semestre/LCOM/g11/proj/sprite.h@{D:/Documentos/FEUP/3 ano/1 semestre/LCOM/g11/proj/sprite.h}}
+
+
+Code used to define the implementations of the sprites.  
+
+
+{\ttfamily \#include $<$stdarg.\+h$>$}\newline
+{\ttfamily \#include $<$stdint.\+h$>$}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$minix/driver.\+h$>$}\newline
+{\ttfamily \#include $<$lcom/lcf.\+h$>$}\newline
+{\ttfamily \#include $<$sys/mman.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}graphic.\+h\char`\"{}}\newline
+\doxysubsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_sprite}{Sprite}}
+\begin{DoxyCompactList}\small\item\em struct of a sprite \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{struct_sprite}{Sprite}} $\ast$ \mbox{\hyperlink{sprite_8h_ab67f095900ba6092fed7f581886f28c6}{create\+\_\+sprite}} (xpm\+\_\+map\+\_\+t xpm, int x, int y, int xspeed, int yspeed)
+\begin{DoxyCompactList}\small\item\em creates a new sprite \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{sprite_8h_af16c6befaac9ffb673b9e3c798d542ed}{destroy\+\_\+sprite}} (\mbox{\hyperlink{struct_sprite}{Sprite}} $\ast$sp)
+\begin{DoxyCompactList}\small\item\em destroy a sprite \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{sprite_8h_a740994f8c16c38bf18eaabac1f5eeeb9}{draw\+\_\+sprite}} (\mbox{\hyperlink{struct_sprite}{Sprite}} $\ast$sp)
+\begin{DoxyCompactList}\small\item\em draw sprite \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{sprite_8h_abb90e767464efea03c8fa31b180ebf2a}{draw\+\_\+sprite\+\_\+and\+\_\+background}} (\mbox{\hyperlink{struct_sprite}{Sprite}} $\ast$sp)
+\begin{DoxyCompactList}\small\item\em draw sprite and the background \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{sprite_8h_af351000fa47d7511dbd4b5cf1cce7955}{draw\+\_\+sprite\+\_\+no\+\_\+packman\+\_\+effect}} (\mbox{\hyperlink{struct_sprite}{Sprite}} $\ast$sp)
+\begin{DoxyCompactList}\small\item\em draw sprite in such way that it does not appear in the other side next \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{sprite_8h_a9c7e23b48dc8ea0f565655744cbae06c}{erase\+\_\+sprite}} (\mbox{\hyperlink{struct_sprite}{Sprite}} $\ast$sp)
+\begin{DoxyCompactList}\small\item\em erase a sprite \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{sprite_8h_aaa2c79a7835e7571f2dbe424bf0994c3}{move\+\_\+sprite}} (\mbox{\hyperlink{struct_sprite}{Sprite}} $\ast$sp)
+\begin{DoxyCompactList}\small\item\em move the sprite \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{sprite_8h_af9f3e0689f3b09f70140ba41c56e0239}{move\+\_\+cursor\+\_\+sprite}} (\mbox{\hyperlink{struct_sprite}{Sprite}} $\ast$sp)
+\begin{DoxyCompactList}\small\item\em move the cursor sprite \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{sprite_8h_a8e62df657629babce930c32997216511}{collition\+\_\+detection}} (\mbox{\hyperlink{struct_sprite}{Sprite}} $\ast$sp1, \mbox{\hyperlink{struct_sprite}{Sprite}} $\ast$sp2)
+\begin{DoxyCompactList}\small\item\em checks if there was a collision between sp1 and sp2 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{sprite_8h_a784dd96bb5ad5cd02561ec83c4c73cce}{set\+\_\+background}} (xpm\+\_\+map\+\_\+t xpm)
+\begin{DoxyCompactList}\small\item\em responsable to set the background \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Code used to define the implementations of the sprites. 
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{sprite_8h_a8e62df657629babce930c32997216511}\label{sprite_8h_a8e62df657629babce930c32997216511}} 
+\index{sprite.h@{sprite.h}!collition\_detection@{collition\_detection}}
+\index{collition\_detection@{collition\_detection}!sprite.h@{sprite.h}}
+\doxysubsubsection{\texorpdfstring{collition\_detection()}{collition\_detection()}}
+{\footnotesize\ttfamily bool collition\+\_\+detection (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_sprite}{Sprite}} $\ast$}]{sp1,  }\item[{\mbox{\hyperlink{struct_sprite}{Sprite}} $\ast$}]{sp2 }\end{DoxyParamCaption})}
+
+
+
+checks if there was a collision between sp1 and sp2 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sp1} & first sprite \\
+\hline
+{\em sp2} & second sprite \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+if there was a collision between sp1 and sp2 returns true, false otherwise 
+\end{DoxyReturn}
+\mbox{\Hypertarget{sprite_8h_ab67f095900ba6092fed7f581886f28c6}\label{sprite_8h_ab67f095900ba6092fed7f581886f28c6}} 
+\index{sprite.h@{sprite.h}!create\_sprite@{create\_sprite}}
+\index{create\_sprite@{create\_sprite}!sprite.h@{sprite.h}}
+\doxysubsubsection{\texorpdfstring{create\_sprite()}{create\_sprite()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_sprite}{Sprite}}$\ast$ create\+\_\+sprite (\begin{DoxyParamCaption}\item[{xpm\+\_\+map\+\_\+t}]{xpm,  }\item[{int}]{x,  }\item[{int}]{y,  }\item[{int}]{xspeed,  }\item[{int}]{yspeed }\end{DoxyParamCaption})}
+
+
+
+creates a new sprite 
+
+
+\begin{DoxyParams}{Parameters}
+{\em xpm} & \\
+\hline
+{\em x} & position in the x-\/axis \\
+\hline
+{\em y} & position in the y-\/axis \\
+\hline
+{\em xspeed} & speed in the x-\/axis \\
+\hline
+{\em yspeed} & speed in the y-\/axis \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a pointer to an object of struct \mbox{\hyperlink{struct_sprite}{Sprite}} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{sprite_8h_af16c6befaac9ffb673b9e3c798d542ed}\label{sprite_8h_af16c6befaac9ffb673b9e3c798d542ed}} 
+\index{sprite.h@{sprite.h}!destroy\_sprite@{destroy\_sprite}}
+\index{destroy\_sprite@{destroy\_sprite}!sprite.h@{sprite.h}}
+\doxysubsubsection{\texorpdfstring{destroy\_sprite()}{destroy\_sprite()}}
+{\footnotesize\ttfamily void destroy\+\_\+sprite (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_sprite}{Sprite}} $\ast$}]{sp }\end{DoxyParamCaption})}
+
+
+
+destroy a sprite 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sp} & sprite to be destroyed \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{sprite_8h_a740994f8c16c38bf18eaabac1f5eeeb9}\label{sprite_8h_a740994f8c16c38bf18eaabac1f5eeeb9}} 
+\index{sprite.h@{sprite.h}!draw\_sprite@{draw\_sprite}}
+\index{draw\_sprite@{draw\_sprite}!sprite.h@{sprite.h}}
+\doxysubsubsection{\texorpdfstring{draw\_sprite()}{draw\_sprite()}}
+{\footnotesize\ttfamily void draw\+\_\+sprite (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_sprite}{Sprite}} $\ast$}]{sp }\end{DoxyParamCaption})}
+
+
+
+draw sprite 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sp} & sprite to be drawn \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{sprite_8h_abb90e767464efea03c8fa31b180ebf2a}\label{sprite_8h_abb90e767464efea03c8fa31b180ebf2a}} 
+\index{sprite.h@{sprite.h}!draw\_sprite\_and\_background@{draw\_sprite\_and\_background}}
+\index{draw\_sprite\_and\_background@{draw\_sprite\_and\_background}!sprite.h@{sprite.h}}
+\doxysubsubsection{\texorpdfstring{draw\_sprite\_and\_background()}{draw\_sprite\_and\_background()}}
+{\footnotesize\ttfamily void draw\+\_\+sprite\+\_\+and\+\_\+background (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_sprite}{Sprite}} $\ast$}]{sp }\end{DoxyParamCaption})}
+
+
+
+draw sprite and the background 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sp} & sprite to be drawn \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{sprite_8h_af351000fa47d7511dbd4b5cf1cce7955}\label{sprite_8h_af351000fa47d7511dbd4b5cf1cce7955}} 
+\index{sprite.h@{sprite.h}!draw\_sprite\_no\_packman\_effect@{draw\_sprite\_no\_packman\_effect}}
+\index{draw\_sprite\_no\_packman\_effect@{draw\_sprite\_no\_packman\_effect}!sprite.h@{sprite.h}}
+\doxysubsubsection{\texorpdfstring{draw\_sprite\_no\_packman\_effect()}{draw\_sprite\_no\_packman\_effect()}}
+{\footnotesize\ttfamily void draw\+\_\+sprite\+\_\+no\+\_\+packman\+\_\+effect (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_sprite}{Sprite}} $\ast$}]{sp }\end{DoxyParamCaption})}
+
+
+
+draw sprite in such way that it does not appear in the other side next 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sp} & sprite to be drawn \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{sprite_8h_a9c7e23b48dc8ea0f565655744cbae06c}\label{sprite_8h_a9c7e23b48dc8ea0f565655744cbae06c}} 
+\index{sprite.h@{sprite.h}!erase\_sprite@{erase\_sprite}}
+\index{erase\_sprite@{erase\_sprite}!sprite.h@{sprite.h}}
+\doxysubsubsection{\texorpdfstring{erase\_sprite()}{erase\_sprite()}}
+{\footnotesize\ttfamily void erase\+\_\+sprite (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_sprite}{Sprite}} $\ast$}]{sp }\end{DoxyParamCaption})}
+
+
+
+erase a sprite 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sp} & sprite to be erased \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{sprite_8h_af9f3e0689f3b09f70140ba41c56e0239}\label{sprite_8h_af9f3e0689f3b09f70140ba41c56e0239}} 
+\index{sprite.h@{sprite.h}!move\_cursor\_sprite@{move\_cursor\_sprite}}
+\index{move\_cursor\_sprite@{move\_cursor\_sprite}!sprite.h@{sprite.h}}
+\doxysubsubsection{\texorpdfstring{move\_cursor\_sprite()}{move\_cursor\_sprite()}}
+{\footnotesize\ttfamily void move\+\_\+cursor\+\_\+sprite (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_sprite}{Sprite}} $\ast$}]{sp }\end{DoxyParamCaption})}
+
+
+
+move the cursor sprite 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sp} & cursor sprite to be moved \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{sprite_8h_aaa2c79a7835e7571f2dbe424bf0994c3}\label{sprite_8h_aaa2c79a7835e7571f2dbe424bf0994c3}} 
+\index{sprite.h@{sprite.h}!move\_sprite@{move\_sprite}}
+\index{move\_sprite@{move\_sprite}!sprite.h@{sprite.h}}
+\doxysubsubsection{\texorpdfstring{move\_sprite()}{move\_sprite()}}
+{\footnotesize\ttfamily void move\+\_\+sprite (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_sprite}{Sprite}} $\ast$}]{sp }\end{DoxyParamCaption})}
+
+
+
+move the sprite 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sp} & sprite to be moved \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{sprite_8h_a784dd96bb5ad5cd02561ec83c4c73cce}\label{sprite_8h_a784dd96bb5ad5cd02561ec83c4c73cce}} 
+\index{sprite.h@{sprite.h}!set\_background@{set\_background}}
+\index{set\_background@{set\_background}!sprite.h@{sprite.h}}
+\doxysubsubsection{\texorpdfstring{set\_background()}{set\_background()}}
+{\footnotesize\ttfamily void set\+\_\+background (\begin{DoxyParamCaption}\item[{xpm\+\_\+map\+\_\+t}]{xpm }\end{DoxyParamCaption})}
+
+
+
+responsable to set the background 
+
+
+\begin{DoxyParams}{Parameters}
+{\em xpm} & \\
+\hline
+\end{DoxyParams}

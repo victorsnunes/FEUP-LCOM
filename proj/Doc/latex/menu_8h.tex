@@ -1,0 +1,204 @@
+\hypertarget{menu_8h}{}\doxysection{D\+:/\+Documentos/\+FEUP/3 ano/1 semestre/\+LCOM/g11/proj/menu.h File Reference}
+\label{menu_8h}\index{D:/Documentos/FEUP/3 ano/1 semestre/LCOM/g11/proj/menu.h@{D:/Documentos/FEUP/3 ano/1 semestre/LCOM/g11/proj/menu.h}}
+
+
+This file contains the definitions of the functions to implement the menus.  
+
+
+{\ttfamily \#include $<$lcom/lcf.\+h$>$}\newline
+{\ttfamily \#include $<$lcom/liblm.\+h$>$}\newline
+{\ttfamily \#include $<$lcom/proj.\+h$>$}\newline
+{\ttfamily \#include $<$stdbool.\+h$>$}\newline
+{\ttfamily \#include $<$stdint.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}sprite.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Assets/\+Menu\+\_\+\+Screens/start\+\_\+menu.\+xpm\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Assets/\+Menu\+\_\+\+Screens/start\+\_\+menu\+\_\+singleplayer.\+xpm\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Assets/\+Menu\+\_\+\+Screens/exit\+\_\+menu\+\_\+no.\+xpm\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Assets/\+Menu\+\_\+\+Screens/instructions\+\_\+menu.\+xpm\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Assets/\+Menu\+\_\+\+Screens/exit\+\_\+window.\+xpm\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Assets/\+Menu\+\_\+\+Screens/instructions\+\_\+window.\+xpm\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Assets/\+Menu\+\_\+\+Screens/scoreboard\+\_\+window.\+xpm\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Assets/\+Menu\+\_\+\+Screens/title.\+xpm\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Assets/\+Menu\+\_\+\+Buttons/blue\+\_\+button\+\_\+exit.\+xpm\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Assets/\+Menu\+\_\+\+Buttons/blue\+\_\+button\+\_\+instructions.\+xpm\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Assets/\+Menu\+\_\+\+Buttons/blue\+\_\+button\+\_\+scoreboard.\+xpm\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Assets/\+Menu\+\_\+\+Buttons/blue\+\_\+button\+\_\+multiplayer.\+xpm\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Assets/\+Menu\+\_\+\+Buttons/blue\+\_\+button\+\_\+singleplayer.\+xpm\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Assets/\+Menu\+\_\+\+Buttons/blue\+\_\+button\+\_\+resume.\+xpm\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Assets/\+Menu\+\_\+\+Buttons/blue\+\_\+button\+\_\+quit.\+xpm\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Assets/\+Menu\+\_\+\+Buttons/blue\+\_\+small\+\_\+no.\+xpm\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Assets/\+Menu\+\_\+\+Buttons/blue\+\_\+small\+\_\+yes.\+xpm\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Assets/\+Menu\+\_\+\+Buttons/orange\+\_\+button\+\_\+exit.\+xpm\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Assets/\+Menu\+\_\+\+Buttons/orange\+\_\+button\+\_\+instructions.\+xpm\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Assets/\+Menu\+\_\+\+Buttons/orange\+\_\+button\+\_\+scoreboard.\+xpm\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Assets/\+Menu\+\_\+\+Buttons/orange\+\_\+button\+\_\+multiplayer.\+xpm\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Assets/\+Menu\+\_\+\+Buttons/orange\+\_\+button\+\_\+singleplayer.\+xpm\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Assets/\+Menu\+\_\+\+Buttons/orange\+\_\+button\+\_\+resume.\+xpm\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Assets/\+Menu\+\_\+\+Buttons/orange\+\_\+button\+\_\+quit.\+xpm\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Assets/\+Menu\+\_\+\+Buttons/orange\+\_\+small\+\_\+no.\+xpm\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Assets/\+Menu\+\_\+\+Buttons/orange\+\_\+small\+\_\+yes.\+xpm\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Assets/\+Menu\+\_\+\+Screens/pause\+\_\+window.\+xpm\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Assets/\+Menu\+\_\+\+Screens/quit\+\_\+window.\+xpm\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Assets/\+Menu\+\_\+\+Screens/game\+\_\+over\+\_\+window.\+xpm\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Assets/\+Highscore/highscore.\+xpm\char`\"{}}\newline
+\doxysubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{menu_8h_a63775c0553a6f57aca7b67f7be477b75}{Menu\+Options}} \{ {\bfseries PLAY}
+, {\bfseries SCOREBOARD}
+, {\bfseries INSTRUCTIONS}
+, {\bfseries EXIT}
+ \}
+\begin{DoxyCompactList}\small\item\em sprite of the medal of high score \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{menu_8h_a44ce559cb33f800bdcd85cfdf881a6ec}\label{menu_8h_a44ce559cb33f800bdcd85cfdf881a6ec}} 
+enum \mbox{\hyperlink{menu_8h_a44ce559cb33f800bdcd85cfdf881a6ec}{Yes\+No\+Options}} \{ {\bfseries YES}
+, {\bfseries NO}
+ \}
+\begin{DoxyCompactList}\small\item\em enum defining the yes or no options \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{menu_8h_a2a4fd985f2971db8c26679eb935a33be}\label{menu_8h_a2a4fd985f2971db8c26679eb935a33be}} 
+enum \mbox{\hyperlink{menu_8h_a2a4fd985f2971db8c26679eb935a33be}{Pause\+Options}} \{ {\bfseries RESUME}
+, {\bfseries QUIT}
+ \}
+\begin{DoxyCompactList}\small\item\em enum defining the pause options, such as resume and quit \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{menu_8h_afc240968401facf32684dfaa71161b35}\label{menu_8h_afc240968401facf32684dfaa71161b35}} 
+void \mbox{\hyperlink{menu_8h_afc240968401facf32684dfaa71161b35}{initialize\+\_\+menu\+\_\+sprites}} ()
+\begin{DoxyCompactList}\small\item\em initialize the sprites from the menu \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{menu_8h_a1f1c4b890a8052147d39d676188a20d3}\label{menu_8h_a1f1c4b890a8052147d39d676188a20d3}} 
+void \mbox{\hyperlink{menu_8h_a1f1c4b890a8052147d39d676188a20d3}{draw\+\_\+menu\+\_\+background}} ()
+\begin{DoxyCompactList}\small\item\em draw the menu background \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{menu_8h_a38461d8c7767f34e4de09714bd76ac9b}{draw\+\_\+menu\+\_\+buttons}} (\mbox{\hyperlink{menu_8h_a63775c0553a6f57aca7b67f7be477b75}{Menu\+Options}} menu\+\_\+option)
+\begin{DoxyCompactList}\small\item\em draw the menu buttons \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{menu_8h_ab27d67997c0e6747c7650ef41eb88f20}\label{menu_8h_ab27d67997c0e6747c7650ef41eb88f20}} 
+void \mbox{\hyperlink{menu_8h_ab27d67997c0e6747c7650ef41eb88f20}{draw\+\_\+menu\+\_\+title}} ()
+\begin{DoxyCompactList}\small\item\em draw the menu title \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{menu_8h_a8e8c374cabf1af35555544b9405f2e28}\label{menu_8h_a8e8c374cabf1af35555544b9405f2e28}} 
+void \mbox{\hyperlink{menu_8h_a8e8c374cabf1af35555544b9405f2e28}{draw\+\_\+scoreboard\+\_\+window}} ()
+\begin{DoxyCompactList}\small\item\em draw the score board window \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{menu_8h_ab3e4028e043f0374652af97b778881ce}\label{menu_8h_ab3e4028e043f0374652af97b778881ce}} 
+void \mbox{\hyperlink{menu_8h_ab3e4028e043f0374652af97b778881ce}{draw\+\_\+instructions\+\_\+window}} ()
+\begin{DoxyCompactList}\small\item\em draw the instructions window \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{menu_8h_a1e60e0b03326f1efa935b57309bc76ff}\label{menu_8h_a1e60e0b03326f1efa935b57309bc76ff}} 
+void \mbox{\hyperlink{menu_8h_a1e60e0b03326f1efa935b57309bc76ff}{draw\+\_\+exit\+\_\+window}} ()
+\begin{DoxyCompactList}\small\item\em draw the exit window \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{menu_8h_a2a2e49f1ae091d553c2d3363bbc419ae}{draw\+\_\+yes\+\_\+no\+\_\+buttons}} (\mbox{\hyperlink{menu_8h_a44ce559cb33f800bdcd85cfdf881a6ec}{Yes\+No\+Options}} exit\+\_\+option)
+\begin{DoxyCompactList}\small\item\em draw the yes and no buttons \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{menu_8h_a831ebf09818ed4e10311c8f75d90ccd8}\label{menu_8h_a831ebf09818ed4e10311c8f75d90ccd8}} 
+void \mbox{\hyperlink{menu_8h_a831ebf09818ed4e10311c8f75d90ccd8}{draw\+\_\+pause\+\_\+window}} ()
+\begin{DoxyCompactList}\small\item\em draw the pause window \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{menu_8h_aaccaf778a4b43d5d7c90f700a2ce925a}{draw\+\_\+pause\+\_\+buttons}} (\mbox{\hyperlink{menu_8h_a2a4fd985f2971db8c26679eb935a33be}{Pause\+Options}} pause\+\_\+option)
+\begin{DoxyCompactList}\small\item\em draw the pause button \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{menu_8h_a82fd7660ecef3064a3b3a816e9db1e7e}\label{menu_8h_a82fd7660ecef3064a3b3a816e9db1e7e}} 
+void \mbox{\hyperlink{menu_8h_a82fd7660ecef3064a3b3a816e9db1e7e}{draw\+\_\+quit\+\_\+window}} ()
+\begin{DoxyCompactList}\small\item\em draw the quit window \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{menu_8h_ae083b730c5412fbfe38a90c0a1b1a31b}\label{menu_8h_ae083b730c5412fbfe38a90c0a1b1a31b}} 
+void \mbox{\hyperlink{menu_8h_ae083b730c5412fbfe38a90c0a1b1a31b}{draw\+\_\+gameover\+\_\+window}} ()
+\begin{DoxyCompactList}\small\item\em draw the game over window \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{menu_8h_ad1e782628a4b20f371a55ccfe08c75d7}{draw\+\_\+highscore\+\_\+medal}} (int points)
+\begin{DoxyCompactList}\small\item\em draw the highscore medal if the variable points is bigger than the one in the first position on the record\+\_\+points array \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{menu_8h_a8e5566cfa1fa56ba30933afe26cff6b4}\label{menu_8h_a8e5566cfa1fa56ba30933afe26cff6b4}} 
+void \mbox{\hyperlink{menu_8h_a8e5566cfa1fa56ba30933afe26cff6b4}{erase\+\_\+scoreboard\+\_\+menu}} ()
+\begin{DoxyCompactList}\small\item\em erase the scoreboard menu \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{menu_8h_a1b8d78122a5e423a883548eb617ee5c8}\label{menu_8h_a1b8d78122a5e423a883548eb617ee5c8}} 
+void \mbox{\hyperlink{menu_8h_a1b8d78122a5e423a883548eb617ee5c8}{erase\+\_\+instructions\+\_\+menu}} ()
+\begin{DoxyCompactList}\small\item\em erase the instructions menu \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{menu_8h_a396b9896ddee5447d624e57e3c426298}\label{menu_8h_a396b9896ddee5447d624e57e3c426298}} 
+void \mbox{\hyperlink{menu_8h_a396b9896ddee5447d624e57e3c426298}{erase\+\_\+exit\+\_\+menu}} ()
+\begin{DoxyCompactList}\small\item\em erase the exit menu \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{menu_8h_a2648f73a8fb8d0d9427581edb989dddb}\label{menu_8h_a2648f73a8fb8d0d9427581edb989dddb}} 
+void \mbox{\hyperlink{menu_8h_a2648f73a8fb8d0d9427581edb989dddb}{erase\+\_\+pause\+\_\+window}} ()
+\begin{DoxyCompactList}\small\item\em erase the pause window \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{menu_8h_a553f2df781dba31d6e76ed0cf8bd69b4}\label{menu_8h_a553f2df781dba31d6e76ed0cf8bd69b4}} 
+void \mbox{\hyperlink{menu_8h_a553f2df781dba31d6e76ed0cf8bd69b4}{erase\+\_\+quit\+\_\+window}} ()
+\begin{DoxyCompactList}\small\item\em erase the quit window \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{menu_8h_aff583672d3da8f053b942623d1ebd1bd}\label{menu_8h_aff583672d3da8f053b942623d1ebd1bd}} 
+void \mbox{\hyperlink{menu_8h_aff583672d3da8f053b942623d1ebd1bd}{erase\+\_\+gameover\+\_\+window}} ()
+\begin{DoxyCompactList}\small\item\em erase the game over window \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{menu_8h_ae9498065bfb4ab962e4d6d1c38725c21}\label{menu_8h_ae9498065bfb4ab962e4d6d1c38725c21}} 
+void \mbox{\hyperlink{menu_8h_ae9498065bfb4ab962e4d6d1c38725c21}{destroy\+\_\+menu\+\_\+sprites}} ()
+\begin{DoxyCompactList}\small\item\em destroy the menu sprites \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This file contains the definitions of the functions to implement the menus. 
+
+
+
+\doxysubsection{Enumeration Type Documentation}
+\mbox{\Hypertarget{menu_8h_a63775c0553a6f57aca7b67f7be477b75}\label{menu_8h_a63775c0553a6f57aca7b67f7be477b75}} 
+\index{menu.h@{menu.h}!MenuOptions@{MenuOptions}}
+\index{MenuOptions@{MenuOptions}!menu.h@{menu.h}}
+\doxysubsubsection{\texorpdfstring{MenuOptions}{MenuOptions}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{menu_8h_a63775c0553a6f57aca7b67f7be477b75}{Menu\+Options}}}
+
+
+
+sprite of the medal of high score 
+
+$<$
+
+enum defining the menu options 
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{menu_8h_ad1e782628a4b20f371a55ccfe08c75d7}\label{menu_8h_ad1e782628a4b20f371a55ccfe08c75d7}} 
+\index{menu.h@{menu.h}!draw\_highscore\_medal@{draw\_highscore\_medal}}
+\index{draw\_highscore\_medal@{draw\_highscore\_medal}!menu.h@{menu.h}}
+\doxysubsubsection{\texorpdfstring{draw\_highscore\_medal()}{draw\_highscore\_medal()}}
+{\footnotesize\ttfamily void draw\+\_\+highscore\+\_\+medal (\begin{DoxyParamCaption}\item[{int}]{points }\end{DoxyParamCaption})}
+
+
+
+draw the highscore medal if the variable points is bigger than the one in the first position on the record\+\_\+points array 
+
+
+\begin{DoxyParams}{Parameters}
+{\em points} & contains the points made by the player \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{menu_8h_a38461d8c7767f34e4de09714bd76ac9b}\label{menu_8h_a38461d8c7767f34e4de09714bd76ac9b}} 
+\index{menu.h@{menu.h}!draw\_menu\_buttons@{draw\_menu\_buttons}}
+\index{draw\_menu\_buttons@{draw\_menu\_buttons}!menu.h@{menu.h}}
+\doxysubsubsection{\texorpdfstring{draw\_menu\_buttons()}{draw\_menu\_buttons()}}
+{\footnotesize\ttfamily void draw\+\_\+menu\+\_\+buttons (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{menu_8h_a63775c0553a6f57aca7b67f7be477b75}{Menu\+Options}}}]{menu\+\_\+option }\end{DoxyParamCaption})}
+
+
+
+draw the menu buttons 
+
+
+\begin{DoxyParams}{Parameters}
+{\em menu\+\_\+option} & object from the struct Menu\+Options \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{menu_8h_aaccaf778a4b43d5d7c90f700a2ce925a}\label{menu_8h_aaccaf778a4b43d5d7c90f700a2ce925a}} 
+\index{menu.h@{menu.h}!draw\_pause\_buttons@{draw\_pause\_buttons}}
+\index{draw\_pause\_buttons@{draw\_pause\_buttons}!menu.h@{menu.h}}
+\doxysubsubsection{\texorpdfstring{draw\_pause\_buttons()}{draw\_pause\_buttons()}}
+{\footnotesize\ttfamily void draw\+\_\+pause\+\_\+buttons (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{menu_8h_a2a4fd985f2971db8c26679eb935a33be}{Pause\+Options}}}]{pause\+\_\+option }\end{DoxyParamCaption})}
+
+
+
+draw the pause button 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pause\+\_\+option} & object from the struct Pause\+Options \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{menu_8h_a2a2e49f1ae091d553c2d3363bbc419ae}\label{menu_8h_a2a2e49f1ae091d553c2d3363bbc419ae}} 
+\index{menu.h@{menu.h}!draw\_yes\_no\_buttons@{draw\_yes\_no\_buttons}}
+\index{draw\_yes\_no\_buttons@{draw\_yes\_no\_buttons}!menu.h@{menu.h}}
+\doxysubsubsection{\texorpdfstring{draw\_yes\_no\_buttons()}{draw\_yes\_no\_buttons()}}
+{\footnotesize\ttfamily void draw\+\_\+yes\+\_\+no\+\_\+buttons (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{menu_8h_a44ce559cb33f800bdcd85cfdf881a6ec}{Yes\+No\+Options}}}]{exit\+\_\+option }\end{DoxyParamCaption})}
+
+
+
+draw the yes and no buttons 
+
+
+\begin{DoxyParams}{Parameters}
+{\em exit\+\_\+option} & object from the struct Yes\+No\+Options \\
+\hline
+\end{DoxyParams}

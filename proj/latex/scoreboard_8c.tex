@@ -1,0 +1,73 @@
+\hypertarget{scoreboard_8c}{}\doxysection{scoreboard.\+c File Reference}
+\label{scoreboard_8c}\index{scoreboard.c@{scoreboard.c}}
+
+
+This file contains the implementation of the scoreboard.  
+
+
+{\ttfamily \#include \char`\"{}scoreboard.\+h\char`\"{}}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{scoreboard_8c_a05d90ef179c465198b0ed966f00e5a3f}{register\+\_\+score}} (int points, char $\ast$name, int day, int month, int year, int hours, int minutes)
+\begin{DoxyCompactList}\small\item\em if the points of the player is higher than one from de record\+\_\+score array, it will be registered in the array \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{scoreboard_8c_a94183e8d9092e97cadb569ed22ffe103}\label{scoreboard_8c_a94183e8d9092e97cadb569ed22ffe103}} 
+char $\ast$ {\bfseries itoa} (int val)
+\item 
+\mbox{\Hypertarget{scoreboard_8c_a1a4081efdb6ded86d0af4bf822cc2b20}\label{scoreboard_8c_a1a4081efdb6ded86d0af4bf822cc2b20}} 
+int {\bfseries string\+To\+Int} (char $\ast$val)
+\item 
+\mbox{\Hypertarget{scoreboard_8c_afc0579558007ad687994086892956928}\label{scoreboard_8c_afc0579558007ad687994086892956928}} 
+void \mbox{\hyperlink{scoreboard_8c_afc0579558007ad687994086892956928}{write\+\_\+top5\+\_\+in\+\_\+the\+\_\+screen}} ()
+\begin{DoxyCompactList}\small\item\em write the top 5 scores in the screen \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{scoreboard_8c_a5f24c21f58349cbc5aa7425cbe8cc04c}\label{scoreboard_8c_a5f24c21f58349cbc5aa7425cbe8cc04c}} 
+void \mbox{\hyperlink{scoreboard_8c_a5f24c21f58349cbc5aa7425cbe8cc04c}{write\+\_\+scores\+\_\+to\+\_\+file}} ()
+\begin{DoxyCompactList}\small\item\em write the scores to a file \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{scoreboard_8c_ad0d0fad132234f94d38213ed7cb73867}\label{scoreboard_8c_ad0d0fad132234f94d38213ed7cb73867}} 
+void \mbox{\hyperlink{scoreboard_8c_ad0d0fad132234f94d38213ed7cb73867}{read\+\_\+scores\+\_\+from\+\_\+file}} ()
+\begin{DoxyCompactList}\small\item\em read the scores from a file \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{Indent}\textbf{ Global variables}\par
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{scoreboard_8c_adaafbdb5667cce439e6d8675485d25e5}\label{scoreboard_8c_adaafbdb5667cce439e6d8675485d25e5}} 
+int \mbox{\hyperlink{scoreboard_8c_adaafbdb5667cce439e6d8675485d25e5}{record\+\_\+points}} \mbox{[}5\mbox{]} = \{-\/1, -\/1, -\/1, -\/1, -\/1\}
+\begin{DoxyCompactList}\small\item\em global variable that keep the 5 record scores \end{DoxyCompactList}\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}\textbf{ Static variables}\par
+\end{Indent}
+
+
+\doxysubsection{Detailed Description}
+This file contains the implementation of the scoreboard. 
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{scoreboard_8c_a05d90ef179c465198b0ed966f00e5a3f}\label{scoreboard_8c_a05d90ef179c465198b0ed966f00e5a3f}} 
+\index{scoreboard.c@{scoreboard.c}!register\_score@{register\_score}}
+\index{register\_score@{register\_score}!scoreboard.c@{scoreboard.c}}
+\doxysubsubsection{\texorpdfstring{register\_score()}{register\_score()}}
+{\footnotesize\ttfamily void register\+\_\+score (\begin{DoxyParamCaption}\item[{int}]{points,  }\item[{char $\ast$}]{name,  }\item[{int}]{day,  }\item[{int}]{month,  }\item[{int}]{year,  }\item[{int}]{hours,  }\item[{int}]{minutes }\end{DoxyParamCaption})}
+
+
+
+if the points of the player is higher than one from de record\+\_\+score array, it will be registered in the array 
+
+
+\begin{DoxyParams}{Parameters}
+{\em points} & points made by the player \\
+\hline
+{\em name} & name of the player \\
+\hline
+{\em day} & day of the play \\
+\hline
+{\em month} & month of the play \\
+\hline
+{\em year} & year of the play \\
+\hline
+{\em hour} & hour of the play \\
+\hline
+{\em minutes} & minute of the play \\
+\hline
+\end{DoxyParams}

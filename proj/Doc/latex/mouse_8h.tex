@@ -1,0 +1,231 @@
+\hypertarget{mouse_8h}{}\doxysection{D\+:/\+Documentos/\+FEUP/3 ano/1 semestre/\+LCOM/g11/proj/mouse.h File Reference}
+\label{mouse_8h}\index{D:/Documentos/FEUP/3 ano/1 semestre/LCOM/g11/proj/mouse.h@{D:/Documentos/FEUP/3 ano/1 semestre/LCOM/g11/proj/mouse.h}}
+
+
+Code used to interact with the Mouse.  
+
+
+{\ttfamily \#include $<$lcom/lcf.\+h$>$}\newline
+{\ttfamily \#include $<$stdint.\+h$>$}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}Assets/\+Mouse\+\_\+\+Cursor/cursor.\+xpm\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Assets/\+Mouse\+\_\+\+Cursor/hand\+\_\+cursor.\+xpm\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}i8042.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}sprite.\+h\char`\"{}}\newline
+\doxysubsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_cursor}{Cursor}}
+\begin{DoxyCompactList}\small\item\em sprite of the hand selection cursor \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{mouse_8h_a9da18257ff113b686bb826d154bfaa87}{mouse\+\_\+subscribe\+\_\+int}} (uint8\+\_\+t $\ast$bit\+\_\+no)
+\begin{DoxyCompactList}\small\item\em Susbcribes mouse interrupts. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{mouse_8h_a685ad2706aca36d9869a30a19b9f446a}{mouse\+\_\+unsubscribe\+\_\+int}} ()
+\begin{DoxyCompactList}\small\item\em Unsubcribes mouse interrupts. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{mouse_8h_a210374b50462acdedab00df64d5cea3c}\label{mouse_8h_a210374b50462acdedab00df64d5cea3c}} 
+void() \mbox{\hyperlink{mouse_8h_a210374b50462acdedab00df64d5cea3c}{mouse\+\_\+ih}} ()
+\begin{DoxyCompactList}\small\item\em Handles mouse interrutps. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{mouse_8h_ac3b0c7f21e17daf958e8e4ee32c0ccd7}{mouse\+\_\+bytes\+\_\+loaded}} ()
+\begin{DoxyCompactList}\small\item\em returns true if the bytes were loaded, false otherwise \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{mouse_8h_adf787e0f096788681cfdae953d637408}{mouse\+\_\+write}} (uint8\+\_\+t cmd)
+\begin{DoxyCompactList}\small\item\em issue a command to the mouse \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{mouse_8h_a54592ae7fd269578c427cfb3d93b5d83}{kbc\+\_\+write}} (int port, uint8\+\_\+t cmd)
+\begin{DoxyCompactList}\small\item\em issues a command to the kbc \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{mouse_8h_ab6d1aa87b6561f509249addd0d919c55}\label{mouse_8h_ab6d1aa87b6561f509249addd0d919c55}} 
+void \mbox{\hyperlink{mouse_8h_ab6d1aa87b6561f509249addd0d919c55}{initialize\+\_\+mouse\+\_\+sprites}} ()
+\begin{DoxyCompactList}\small\item\em initializes the mouse\textquotesingle{}s sprites \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_cursor}{Cursor}} $\ast$ \mbox{\hyperlink{mouse_8h_a234572e3817a4f64b8a83a84fcbdb776}{create\+\_\+cursor}} ()
+\begin{DoxyCompactList}\small\item\em create the cursor \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{mouse_8h_a9d7acb721c86850000ec82228ac94f34}{update\+\_\+cursor}} (\mbox{\hyperlink{struct_cursor}{Cursor}} $\ast$c)
+\begin{DoxyCompactList}\small\item\em update the cursor \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{mouse_8h_a68ed1eda9c3e5fcc5645a84c3b2d5614}{draw\+\_\+cursor}} (\mbox{\hyperlink{struct_cursor}{Cursor}} $\ast$c)
+\begin{DoxyCompactList}\small\item\em draw the cursor \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{mouse_8h_a79f7c0d3aa06b87386aa9edc4a090151}{become\+\_\+hand\+\_\+cursor}} (\mbox{\hyperlink{struct_cursor}{Cursor}} $\ast$c)
+\begin{DoxyCompactList}\small\item\em change the cursor to hand mode \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{mouse_8h_a6a2d7048c84d9675691587684726a0fb}{become\+\_\+regular\+\_\+cursor}} (\mbox{\hyperlink{struct_cursor}{Cursor}} $\ast$c)
+\begin{DoxyCompactList}\small\item\em change the cursor to regular mode \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{mouse_8h_a67e83bbdd823ad9546a67bb39b37c846}{destroy\+\_\+cursor}} (\mbox{\hyperlink{struct_cursor}{Cursor}} $\ast$c)
+\begin{DoxyCompactList}\small\item\em destroy the sprite from the cursor given \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{mouse_8h_a484035f55159909f24ff66151f0a0a38}\label{mouse_8h_a484035f55159909f24ff66151f0a0a38}} 
+void \mbox{\hyperlink{mouse_8h_a484035f55159909f24ff66151f0a0a38}{destroy\+\_\+mouse\+\_\+sprites}} ()
+\begin{DoxyCompactList}\small\item\em destroy the sprite from the mouse \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Code used to interact with the Mouse. 
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{mouse_8h_a79f7c0d3aa06b87386aa9edc4a090151}\label{mouse_8h_a79f7c0d3aa06b87386aa9edc4a090151}} 
+\index{mouse.h@{mouse.h}!become\_hand\_cursor@{become\_hand\_cursor}}
+\index{become\_hand\_cursor@{become\_hand\_cursor}!mouse.h@{mouse.h}}
+\doxysubsubsection{\texorpdfstring{become\_hand\_cursor()}{become\_hand\_cursor()}}
+{\footnotesize\ttfamily void become\+\_\+hand\+\_\+cursor (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_cursor}{Cursor}} $\ast$}]{c }\end{DoxyParamCaption})}
+
+
+
+change the cursor to hand mode 
+
+
+\begin{DoxyParams}{Parameters}
+{\em c} & is an object from the struct \mbox{\hyperlink{struct_cursor}{Cursor}} \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{mouse_8h_a6a2d7048c84d9675691587684726a0fb}\label{mouse_8h_a6a2d7048c84d9675691587684726a0fb}} 
+\index{mouse.h@{mouse.h}!become\_regular\_cursor@{become\_regular\_cursor}}
+\index{become\_regular\_cursor@{become\_regular\_cursor}!mouse.h@{mouse.h}}
+\doxysubsubsection{\texorpdfstring{become\_regular\_cursor()}{become\_regular\_cursor()}}
+{\footnotesize\ttfamily void become\+\_\+regular\+\_\+cursor (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_cursor}{Cursor}} $\ast$}]{c }\end{DoxyParamCaption})}
+
+
+
+change the cursor to regular mode 
+
+
+\begin{DoxyParams}{Parameters}
+{\em c} & is an object from the struct \mbox{\hyperlink{struct_cursor}{Cursor}} \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{mouse_8h_a234572e3817a4f64b8a83a84fcbdb776}\label{mouse_8h_a234572e3817a4f64b8a83a84fcbdb776}} 
+\index{mouse.h@{mouse.h}!create\_cursor@{create\_cursor}}
+\index{create\_cursor@{create\_cursor}!mouse.h@{mouse.h}}
+\doxysubsubsection{\texorpdfstring{create\_cursor()}{create\_cursor()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_cursor}{Cursor}}$\ast$ create\+\_\+cursor (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+create the cursor 
+
+\begin{DoxyReturn}{Returns}
+a pointer to an object from the struct \mbox{\hyperlink{struct_cursor}{Cursor}} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{mouse_8h_a67e83bbdd823ad9546a67bb39b37c846}\label{mouse_8h_a67e83bbdd823ad9546a67bb39b37c846}} 
+\index{mouse.h@{mouse.h}!destroy\_cursor@{destroy\_cursor}}
+\index{destroy\_cursor@{destroy\_cursor}!mouse.h@{mouse.h}}
+\doxysubsubsection{\texorpdfstring{destroy\_cursor()}{destroy\_cursor()}}
+{\footnotesize\ttfamily void destroy\+\_\+cursor (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_cursor}{Cursor}} $\ast$}]{c }\end{DoxyParamCaption})}
+
+
+
+destroy the sprite from the cursor given 
+
+
+\begin{DoxyParams}{Parameters}
+{\em c} & is an object from the struct \mbox{\hyperlink{struct_cursor}{Cursor}} \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{mouse_8h_a68ed1eda9c3e5fcc5645a84c3b2d5614}\label{mouse_8h_a68ed1eda9c3e5fcc5645a84c3b2d5614}} 
+\index{mouse.h@{mouse.h}!draw\_cursor@{draw\_cursor}}
+\index{draw\_cursor@{draw\_cursor}!mouse.h@{mouse.h}}
+\doxysubsubsection{\texorpdfstring{draw\_cursor()}{draw\_cursor()}}
+{\footnotesize\ttfamily void draw\+\_\+cursor (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_cursor}{Cursor}} $\ast$}]{c }\end{DoxyParamCaption})}
+
+
+
+draw the cursor 
+
+
+\begin{DoxyParams}{Parameters}
+{\em c} & is an object from the struct \mbox{\hyperlink{struct_cursor}{Cursor}} \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{mouse_8h_a54592ae7fd269578c427cfb3d93b5d83}\label{mouse_8h_a54592ae7fd269578c427cfb3d93b5d83}} 
+\index{mouse.h@{mouse.h}!kbc\_write@{kbc\_write}}
+\index{kbc\_write@{kbc\_write}!mouse.h@{mouse.h}}
+\doxysubsubsection{\texorpdfstring{kbc\_write()}{kbc\_write()}}
+{\footnotesize\ttfamily int kbc\+\_\+write (\begin{DoxyParamCaption}\item[{int}]{port,  }\item[{uint8\+\_\+t}]{cmd }\end{DoxyParamCaption})}
+
+
+
+issues a command to the kbc 
+
+
+\begin{DoxyParams}{Parameters}
+{\em port} & address where the command will be written \\
+\hline
+{\em cmd} & command to be sent \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 on success, 1 otherwise 
+\end{DoxyReturn}
+\mbox{\Hypertarget{mouse_8h_ac3b0c7f21e17daf958e8e4ee32c0ccd7}\label{mouse_8h_ac3b0c7f21e17daf958e8e4ee32c0ccd7}} 
+\index{mouse.h@{mouse.h}!mouse\_bytes\_loaded@{mouse\_bytes\_loaded}}
+\index{mouse\_bytes\_loaded@{mouse\_bytes\_loaded}!mouse.h@{mouse.h}}
+\doxysubsubsection{\texorpdfstring{mouse\_bytes\_loaded()}{mouse\_bytes\_loaded()}}
+{\footnotesize\ttfamily bool mouse\+\_\+bytes\+\_\+loaded (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+returns true if the bytes were loaded, false otherwise 
+
+\begin{DoxyReturn}{Returns}
+if the bytes were loaded 
+\end{DoxyReturn}
+\mbox{\Hypertarget{mouse_8h_a9da18257ff113b686bb826d154bfaa87}\label{mouse_8h_a9da18257ff113b686bb826d154bfaa87}} 
+\index{mouse.h@{mouse.h}!mouse\_subscribe\_int@{mouse\_subscribe\_int}}
+\index{mouse\_subscribe\_int@{mouse\_subscribe\_int}!mouse.h@{mouse.h}}
+\doxysubsubsection{\texorpdfstring{mouse\_subscribe\_int()}{mouse\_subscribe\_int()}}
+{\footnotesize\ttfamily int mouse\+\_\+subscribe\+\_\+int (\begin{DoxyParamCaption}\item[{uint8\+\_\+t $\ast$}]{bit\+\_\+no }\end{DoxyParamCaption})}
+
+
+
+Susbcribes mouse interrupts. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em bit\+\_\+no} & Mask with Mouse\textquotesingle{}s IRQ line \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 on success, 1 otherwise 
+\end{DoxyReturn}
+\mbox{\Hypertarget{mouse_8h_a685ad2706aca36d9869a30a19b9f446a}\label{mouse_8h_a685ad2706aca36d9869a30a19b9f446a}} 
+\index{mouse.h@{mouse.h}!mouse\_unsubscribe\_int@{mouse\_unsubscribe\_int}}
+\index{mouse\_unsubscribe\_int@{mouse\_unsubscribe\_int}!mouse.h@{mouse.h}}
+\doxysubsubsection{\texorpdfstring{mouse\_unsubscribe\_int()}{mouse\_unsubscribe\_int()}}
+{\footnotesize\ttfamily int mouse\+\_\+unsubscribe\+\_\+int (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Unsubcribes mouse interrupts. 
+
+\begin{DoxyReturn}{Returns}
+0 on success, 1 otherwise 
+\end{DoxyReturn}
+\mbox{\Hypertarget{mouse_8h_adf787e0f096788681cfdae953d637408}\label{mouse_8h_adf787e0f096788681cfdae953d637408}} 
+\index{mouse.h@{mouse.h}!mouse\_write@{mouse\_write}}
+\index{mouse\_write@{mouse\_write}!mouse.h@{mouse.h}}
+\doxysubsubsection{\texorpdfstring{mouse\_write()}{mouse\_write()}}
+{\footnotesize\ttfamily int mouse\+\_\+write (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{cmd }\end{DoxyParamCaption})}
+
+
+
+issue a command to the mouse 
+
+
+\begin{DoxyParams}{Parameters}
+{\em cmd} & command to be sent \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 on success, non-\/zero otherwise 
+\end{DoxyReturn}
+\mbox{\Hypertarget{mouse_8h_a9d7acb721c86850000ec82228ac94f34}\label{mouse_8h_a9d7acb721c86850000ec82228ac94f34}} 
+\index{mouse.h@{mouse.h}!update\_cursor@{update\_cursor}}
+\index{update\_cursor@{update\_cursor}!mouse.h@{mouse.h}}
+\doxysubsubsection{\texorpdfstring{update\_cursor()}{update\_cursor()}}
+{\footnotesize\ttfamily void update\+\_\+cursor (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_cursor}{Cursor}} $\ast$}]{c }\end{DoxyParamCaption})}
+
+
+
+update the cursor 
+
+
+\begin{DoxyParams}{Parameters}
+{\em c} & is an object from the struct \mbox{\hyperlink{struct_cursor}{Cursor}} \\
+\hline
+\end{DoxyParams}

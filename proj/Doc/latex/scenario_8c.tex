@@ -1,0 +1,45 @@
+\hypertarget{scenario_8c}{}\doxysection{D\+:/\+Documentos/\+FEUP/3 ano/1 semestre/\+LCOM/g11/proj/scenario.c File Reference}
+\label{scenario_8c}\index{D:/Documentos/FEUP/3 ano/1 semestre/LCOM/g11/proj/scenario.c@{D:/Documentos/FEUP/3 ano/1 semestre/LCOM/g11/proj/scenario.c}}
+
+
+This file contains the implementation of the scenario.  
+
+
+{\ttfamily \#include \char`\"{}scenario.\+h\char`\"{}}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{scenario_8c_afd8e17489e58b8c29a02640226d7c3ae}\label{scenario_8c_afd8e17489e58b8c29a02640226d7c3ae}} 
+void \mbox{\hyperlink{scenario_8c_afd8e17489e58b8c29a02640226d7c3ae}{initialize\+\_\+scenario\+\_\+sprites}} ()
+\begin{DoxyCompactList}\small\item\em Initializes the sprites from the scenario. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{scenario_8c_afb0195b301b7da6f39e314fb7908e73a}\label{scenario_8c_afb0195b301b7da6f39e314fb7908e73a}} 
+void \mbox{\hyperlink{scenario_8c_afb0195b301b7da6f39e314fb7908e73a}{draw\+\_\+scenario\+\_\+background}} ()
+\begin{DoxyCompactList}\small\item\em draw the scenario background, calling the \mbox{\hyperlink{sprite_8c_a740994f8c16c38bf18eaabac1f5eeeb9}{draw\+\_\+sprite()}} function \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{scenario_8c_a1d347f7099077f521775ca938b405e48}{draw\+\_\+moving\+\_\+scenario}} (bool move)
+\begin{DoxyCompactList}\small\item\em draw the scenario, if the variable move is true, calls the \mbox{\hyperlink{sprite_8c_aaa2c79a7835e7571f2dbe424bf0994c3}{move\+\_\+sprite()}} function, otherwise it will just draw it normally \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{scenario_8c_acb425bd5deedc64563f11ea2b05c2fa1}\label{scenario_8c_acb425bd5deedc64563f11ea2b05c2fa1}} 
+void \mbox{\hyperlink{scenario_8c_acb425bd5deedc64563f11ea2b05c2fa1}{destroy\+\_\+scenario\+\_\+sprites}} ()
+\begin{DoxyCompactList}\small\item\em destroy the sprites of the scenario \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This file contains the implementation of the scenario. 
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{scenario_8c_a1d347f7099077f521775ca938b405e48}\label{scenario_8c_a1d347f7099077f521775ca938b405e48}} 
+\index{scenario.c@{scenario.c}!draw\_moving\_scenario@{draw\_moving\_scenario}}
+\index{draw\_moving\_scenario@{draw\_moving\_scenario}!scenario.c@{scenario.c}}
+\doxysubsubsection{\texorpdfstring{draw\_moving\_scenario()}{draw\_moving\_scenario()}}
+{\footnotesize\ttfamily void draw\+\_\+moving\+\_\+scenario (\begin{DoxyParamCaption}\item[{bool}]{move }\end{DoxyParamCaption})}
+
+
+
+draw the scenario, if the variable move is true, calls the \mbox{\hyperlink{sprite_8c_aaa2c79a7835e7571f2dbe424bf0994c3}{move\+\_\+sprite()}} function, otherwise it will just draw it normally 
+
+
+\begin{DoxyParams}{Parameters}
+{\em move} & true if it is moving, false otherwise \\
+\hline
+\end{DoxyParams}

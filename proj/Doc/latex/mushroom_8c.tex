@@ -1,0 +1,117 @@
+\hypertarget{mushroom_8c}{}\doxysection{D\+:/\+Documentos/\+FEUP/3 ano/1 semestre/\+LCOM/g11/proj/mushroom.c File Reference}
+\label{mushroom_8c}\index{D:/Documentos/FEUP/3 ano/1 semestre/LCOM/g11/proj/mushroom.c@{D:/Documentos/FEUP/3 ano/1 semestre/LCOM/g11/proj/mushroom.c}}
+
+
+This file contains the implementation of the mushrooms.  
+
+
+{\ttfamily \#include \char`\"{}mushroom.\+h\char`\"{}}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{mushroom_8c_aa8342ead701b5d1d912008e7f569d405}\label{mushroom_8c_aa8342ead701b5d1d912008e7f569d405}} 
+void \mbox{\hyperlink{mushroom_8c_aa8342ead701b5d1d912008e7f569d405}{initialize\+\_\+mushrooms}} ()
+\begin{DoxyCompactList}\small\item\em Initializes the mushroom in the array. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{mushroom_8c_ac71d678a1934daeec9f0417a370e4b1d}\label{mushroom_8c_ac71d678a1934daeec9f0417a370e4b1d}} 
+void \mbox{\hyperlink{mushroom_8c_ac71d678a1934daeec9f0417a370e4b1d}{initialize\+\_\+mushroom\+\_\+sprites}} ()
+\begin{DoxyCompactList}\small\item\em Initializes the sprites of the mushrooms. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{mushroom_8c_a270ef2711e7410e24e024cf98366135d}{mushroom\+\_\+out\+\_\+of\+\_\+range}} (\mbox{\hyperlink{struct_mushroom}{Mushroom}} $\ast$m)
+\begin{DoxyCompactList}\small\item\em returns if the mushroom is out of range \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_mushroom}{Mushroom}} $\ast$ \mbox{\hyperlink{mushroom_8c_a8c7ddd2a96812958b2b289439fa0dd1d}{create\+\_\+mushroom}} ()
+\begin{DoxyCompactList}\small\item\em creates a new mushroom \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{mushroom_8c_a4c8d2f0ae61ea4fb5f6ba15633dbefb0}{mushroom\+\_\+generator}} (int \mbox{\hyperlink{events_8c_ae78958f6f4d3384a463561762c24dd3f}{player\+\_\+points}})
+\begin{DoxyCompactList}\small\item\em generate a new mushroom, having 3 diferents modes, easy, medium and hard we can\textquotesingle{}t generate it if\+: The mushroom will take a place where is almost impossible for the player not to loose OR will be really close to the previous one, causing a bad visual effect \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{mushroom_8c_a0c3add13cc874b8a1b6faa1e66e8b8f1}{draw\+\_\+mushrooms}} (bool move)
+\begin{DoxyCompactList}\small\item\em draw mushrooms \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{mushroom_8c_a946d93fbaa0254fa6b0609ee663fba36}{mushrooms\+\_\+collision\+\_\+detection}} (\mbox{\hyperlink{struct_character}{Character}} $\ast$character)
+\begin{DoxyCompactList}\small\item\em detects if there was a collision of the character with a mushroom, true if it happened, 1 $\ast$ otherwise \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{mushroom_8c_a9cce705d92f1cd8061889475634c2d12}\label{mushroom_8c_a9cce705d92f1cd8061889475634c2d12}} 
+void \mbox{\hyperlink{mushroom_8c_a9cce705d92f1cd8061889475634c2d12}{destroy\+\_\+mushrooms}} ()
+\begin{DoxyCompactList}\small\item\em take the mushrooms out of the array \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{mushroom_8c_a9aba3793cfe8c2b709d7f02d7e188e2a}\label{mushroom_8c_a9aba3793cfe8c2b709d7f02d7e188e2a}} 
+void \mbox{\hyperlink{mushroom_8c_a9aba3793cfe8c2b709d7f02d7e188e2a}{destroy\+\_\+mushroom\+\_\+sprites}} ()
+\begin{DoxyCompactList}\small\item\em destroy the sprites of the mushroom \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This file contains the implementation of the mushrooms. 
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{mushroom_8c_a8c7ddd2a96812958b2b289439fa0dd1d}\label{mushroom_8c_a8c7ddd2a96812958b2b289439fa0dd1d}} 
+\index{mushroom.c@{mushroom.c}!create\_mushroom@{create\_mushroom}}
+\index{create\_mushroom@{create\_mushroom}!mushroom.c@{mushroom.c}}
+\doxysubsubsection{\texorpdfstring{create\_mushroom()}{create\_mushroom()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_mushroom}{Mushroom}}$\ast$ create\+\_\+mushroom (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+creates a new mushroom 
+
+\begin{DoxyReturn}{Returns}
+a pointer to an object of struct \mbox{\hyperlink{struct_mushroom}{Mushroom}} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{mushroom_8c_a0c3add13cc874b8a1b6faa1e66e8b8f1}\label{mushroom_8c_a0c3add13cc874b8a1b6faa1e66e8b8f1}} 
+\index{mushroom.c@{mushroom.c}!draw\_mushrooms@{draw\_mushrooms}}
+\index{draw\_mushrooms@{draw\_mushrooms}!mushroom.c@{mushroom.c}}
+\doxysubsubsection{\texorpdfstring{draw\_mushrooms()}{draw\_mushrooms()}}
+{\footnotesize\ttfamily void draw\+\_\+mushrooms (\begin{DoxyParamCaption}\item[{bool}]{move }\end{DoxyParamCaption})}
+
+
+
+draw mushrooms 
+
+
+\begin{DoxyParams}{Parameters}
+{\em move} & true if it is moving, false otherwise \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{mushroom_8c_a4c8d2f0ae61ea4fb5f6ba15633dbefb0}\label{mushroom_8c_a4c8d2f0ae61ea4fb5f6ba15633dbefb0}} 
+\index{mushroom.c@{mushroom.c}!mushroom\_generator@{mushroom\_generator}}
+\index{mushroom\_generator@{mushroom\_generator}!mushroom.c@{mushroom.c}}
+\doxysubsubsection{\texorpdfstring{mushroom\_generator()}{mushroom\_generator()}}
+{\footnotesize\ttfamily void mushroom\+\_\+generator (\begin{DoxyParamCaption}\item[{int}]{player\+\_\+points }\end{DoxyParamCaption})}
+
+
+
+generate a new mushroom, having 3 diferents modes, easy, medium and hard we can\textquotesingle{}t generate it if\+: The mushroom will take a place where is almost impossible for the player not to loose OR will be really close to the previous one, causing a bad visual effect 
+
+
+\begin{DoxyParams}{Parameters}
+{\em player\+\_\+points} & used to distinguish te level of difficulty the player is. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{mushroom_8c_a270ef2711e7410e24e024cf98366135d}\label{mushroom_8c_a270ef2711e7410e24e024cf98366135d}} 
+\index{mushroom.c@{mushroom.c}!mushroom\_out\_of\_range@{mushroom\_out\_of\_range}}
+\index{mushroom\_out\_of\_range@{mushroom\_out\_of\_range}!mushroom.c@{mushroom.c}}
+\doxysubsubsection{\texorpdfstring{mushroom\_out\_of\_range()}{mushroom\_out\_of\_range()}}
+{\footnotesize\ttfamily bool mushroom\+\_\+out\+\_\+of\+\_\+range (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_mushroom}{Mushroom}} $\ast$}]{m }\end{DoxyParamCaption})}
+
+
+
+returns if the mushroom is out of range 
+
+
+\begin{DoxyParams}{Parameters}
+{\em m} & is an object of of struct \mbox{\hyperlink{struct_mushroom}{Mushroom}} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if it is out of range, false otherwise 
+\end{DoxyReturn}
+\mbox{\Hypertarget{mushroom_8c_a946d93fbaa0254fa6b0609ee663fba36}\label{mushroom_8c_a946d93fbaa0254fa6b0609ee663fba36}} 
+\index{mushroom.c@{mushroom.c}!mushrooms\_collision\_detection@{mushrooms\_collision\_detection}}
+\index{mushrooms\_collision\_detection@{mushrooms\_collision\_detection}!mushroom.c@{mushroom.c}}
+\doxysubsubsection{\texorpdfstring{mushrooms\_collision\_detection()}{mushrooms\_collision\_detection()}}
+{\footnotesize\ttfamily bool mushrooms\+\_\+collision\+\_\+detection (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_character}{Character}} $\ast$}]{character }\end{DoxyParamCaption})}
+
+
+
+detects if there was a collision of the character with a mushroom, true if it happened, 1 $\ast$ otherwise 
+
+
+\begin{DoxyParams}{Parameters}
+{\em character} & a pointer to an object character from the struct \mbox{\hyperlink{struct_character}{Character}} \\
+\hline
+\end{DoxyParams}

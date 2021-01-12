@@ -1,0 +1,107 @@
+\hypertarget{utils_8h}{}\doxysection{D\+:/\+Documentos/\+FEUP/3 ano/1 semestre/\+LCOM/g11/proj/utils.h File Reference}
+\label{utils_8h}\index{D:/Documentos/FEUP/3 ano/1 semestre/LCOM/g11/proj/utils.h@{D:/Documentos/FEUP/3 ano/1 semestre/LCOM/g11/proj/utils.h}}
+
+
+definition of helpful functions  
+
+
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$stdint.\+h$>$}\newline
+{\ttfamily \#include $<$lcom/lcf.\+h$>$}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int() \mbox{\hyperlink{utils_8h_a81621440b3d65680979425e39aa8c789}{util\+\_\+get\+\_\+\+LSB}} (uint16\+\_\+t val, uint8\+\_\+t $\ast$lsb)
+\begin{DoxyCompactList}\small\item\em Get the least significant bits in a value. \end{DoxyCompactList}\item 
+int() \mbox{\hyperlink{utils_8h_a6a880076cd2ec468834438b6e0c58836}{util\+\_\+get\+\_\+\+MSB}} (uint16\+\_\+t val, uint8\+\_\+t $\ast$msb)
+\begin{DoxyCompactList}\small\item\em get the most significant bits in a value \end{DoxyCompactList}\item 
+int() \mbox{\hyperlink{utils_8h_a79a031a8611f5b2d6afa4158e92b0fb4}{util\+\_\+sys\+\_\+inb}} (int port, uint8\+\_\+t $\ast$value)
+\begin{DoxyCompactList}\small\item\em Invokes sys\+\_\+inb() system call but reads the value into a uint8\+\_\+t variable. \end{DoxyCompactList}\item 
+char $\ast$() \mbox{\hyperlink{utils_8h_aec1e4a85009bd1eea2c0bc37218e2d99}{to\+\_\+binary}} (uint32\+\_\+t size, uint32\+\_\+t n)
+\begin{DoxyCompactList}\small\item\em Converts a number to binary version in char. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+definition of helpful functions 
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{utils_8h_aec1e4a85009bd1eea2c0bc37218e2d99}\label{utils_8h_aec1e4a85009bd1eea2c0bc37218e2d99}} 
+\index{utils.h@{utils.h}!to\_binary@{to\_binary}}
+\index{to\_binary@{to\_binary}!utils.h@{utils.h}}
+\doxysubsubsection{\texorpdfstring{to\_binary()}{to\_binary()}}
+{\footnotesize\ttfamily char$\ast$() to\+\_\+binary (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{size,  }\item[{uint32\+\_\+t}]{n }\end{DoxyParamCaption})}
+
+
+
+Converts a number to binary version in char. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em size} & Size of the number \\
+\hline
+{\em n} & Number to be converted \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{utils_8h_a81621440b3d65680979425e39aa8c789}\label{utils_8h_a81621440b3d65680979425e39aa8c789}} 
+\index{utils.h@{utils.h}!util\_get\_LSB@{util\_get\_LSB}}
+\index{util\_get\_LSB@{util\_get\_LSB}!utils.h@{utils.h}}
+\doxysubsubsection{\texorpdfstring{util\_get\_LSB()}{util\_get\_LSB()}}
+{\footnotesize\ttfamily int() util\+\_\+get\+\_\+\+LSB (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{val,  }\item[{uint8\+\_\+t $\ast$}]{lsb }\end{DoxyParamCaption})}
+
+
+
+Get the least significant bits in a value. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em val} & input 2 byte integer \\
+\hline
+{\em lsb} & Address of memory location to be update with val\textquotesingle{}s LSB \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 upon success, 1 otherwise 
+\end{DoxyReturn}
+\mbox{\Hypertarget{utils_8h_a6a880076cd2ec468834438b6e0c58836}\label{utils_8h_a6a880076cd2ec468834438b6e0c58836}} 
+\index{utils.h@{utils.h}!util\_get\_MSB@{util\_get\_MSB}}
+\index{util\_get\_MSB@{util\_get\_MSB}!utils.h@{utils.h}}
+\doxysubsubsection{\texorpdfstring{util\_get\_MSB()}{util\_get\_MSB()}}
+{\footnotesize\ttfamily int() util\+\_\+get\+\_\+\+MSB (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{val,  }\item[{uint8\+\_\+t $\ast$}]{msb }\end{DoxyParamCaption})}
+
+
+
+get the most significant bits in a value 
+
+
+\begin{DoxyParams}{Parameters}
+{\em val} & input 2 byte integer \\
+\hline
+{\em msb} & Address of memory location to be update with val\textquotesingle{}s MSB \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 upon success, 1 otherwise 
+\end{DoxyReturn}
+\mbox{\Hypertarget{utils_8h_a79a031a8611f5b2d6afa4158e92b0fb4}\label{utils_8h_a79a031a8611f5b2d6afa4158e92b0fb4}} 
+\index{utils.h@{utils.h}!util\_sys\_inb@{util\_sys\_inb}}
+\index{util\_sys\_inb@{util\_sys\_inb}!utils.h@{utils.h}}
+\doxysubsubsection{\texorpdfstring{util\_sys\_inb()}{util\_sys\_inb()}}
+{\footnotesize\ttfamily int() util\+\_\+sys\+\_\+inb (\begin{DoxyParamCaption}\item[{int}]{port,  }\item[{uint8\+\_\+t $\ast$}]{value }\end{DoxyParamCaption})}
+
+
+
+Invokes sys\+\_\+inb() system call but reads the value into a uint8\+\_\+t variable. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em port} & The port that is to be read \\
+\hline
+{\em value} & Address of the 8-\/bit variable to be update with the value read \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 upon success, 1 otherwise 
+\end{DoxyReturn}

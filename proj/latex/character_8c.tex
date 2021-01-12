@@ -1,0 +1,133 @@
+\hypertarget{character_8c}{}\doxysection{character.\+c File Reference}
+\label{character_8c}\index{character.c@{character.c}}
+
+
+This file contains the implementation of the character ~\newline
+  
+
+
+{\ttfamily \#include \char`\"{}character.\+h\char`\"{}}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{character_8c_ac48f6790dda5aaaf68e14e2cfda0572a}\label{character_8c_ac48f6790dda5aaaf68e14e2cfda0572a}} 
+void \mbox{\hyperlink{character_8c_ac48f6790dda5aaaf68e14e2cfda0572a}{initialize\+\_\+character\+\_\+sprites}} ()
+\begin{DoxyCompactList}\small\item\em function that initizalizes the sprites of the character \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_character}{Character}} $\ast$ \mbox{\hyperlink{character_8c_ade3f05cb3a686f9ee6f9352080aad0da}{create\+\_\+character}} ()
+\begin{DoxyCompactList}\small\item\em function that creates the character \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{character_8c_a88df4ef694450cc3217bc07dfe4642aa}{draw\+\_\+character\+\_\+running}} (\mbox{\hyperlink{struct_character}{Character}} $\ast$character, bool move)
+\begin{DoxyCompactList}\small\item\em function that initizalizes the sprites of the character running \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{character_8c_a3f8250fc679a36e9cd593110466a6239}{draw\+\_\+character\+\_\+jumping}} (\mbox{\hyperlink{struct_character}{Character}} $\ast$character, bool move)
+\begin{DoxyCompactList}\small\item\em function that initizalizes the sprites of the character jumping \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{character_8c_a0f0779cd7e3fc27f52ea7d1b1a043c0b}{draw\+\_\+character\+\_\+dying}} (\mbox{\hyperlink{struct_character}{Character}} $\ast$character)
+\begin{DoxyCompactList}\small\item\em function that initizalizes the sprites of the character dying \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{character_8c_a0eb8b332b27cfe8e0f65381d58c86002}{draw\+\_\+character}} (\mbox{\hyperlink{struct_character}{Character}} $\ast$character, bool move)
+\begin{DoxyCompactList}\small\item\em function that initizalizes the sprites of the character \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{character_8c_a9d1ee8b993d367300d31436381768c6e}{destroy\+\_\+character}} (\mbox{\hyperlink{struct_character}{Character}} $\ast$character)
+\begin{DoxyCompactList}\small\item\em destroy the object character \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{character_8c_a9f05026ed685831e0acf7dd6a8d1b0fe}\label{character_8c_a9f05026ed685831e0acf7dd6a8d1b0fe}} 
+void \mbox{\hyperlink{character_8c_a9f05026ed685831e0acf7dd6a8d1b0fe}{destroy\+\_\+character\+\_\+sprites}} ()
+\begin{DoxyCompactList}\small\item\em destroy the sprites of the character \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This file contains the implementation of the character ~\newline
+ 
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{character_8c_ade3f05cb3a686f9ee6f9352080aad0da}\label{character_8c_ade3f05cb3a686f9ee6f9352080aad0da}} 
+\index{character.c@{character.c}!create\_character@{create\_character}}
+\index{create\_character@{create\_character}!character.c@{character.c}}
+\doxysubsubsection{\texorpdfstring{create\_character()}{create\_character()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_character}{Character}}$\ast$ create\+\_\+character (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+function that creates the character 
+
+\begin{DoxyReturn}{Returns}
+a pointer to an object of struct \mbox{\hyperlink{struct_character}{Character}} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{character_8c_a9d1ee8b993d367300d31436381768c6e}\label{character_8c_a9d1ee8b993d367300d31436381768c6e}} 
+\index{character.c@{character.c}!destroy\_character@{destroy\_character}}
+\index{destroy\_character@{destroy\_character}!character.c@{character.c}}
+\doxysubsubsection{\texorpdfstring{destroy\_character()}{destroy\_character()}}
+{\footnotesize\ttfamily void destroy\+\_\+character (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_character}{Character}} $\ast$}]{character }\end{DoxyParamCaption})}
+
+
+
+destroy the object character 
+
+
+\begin{DoxyParams}{Parameters}
+{\em character} & a pointer to an object of \mbox{\hyperlink{struct_character}{Character}} \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{character_8c_a0eb8b332b27cfe8e0f65381d58c86002}\label{character_8c_a0eb8b332b27cfe8e0f65381d58c86002}} 
+\index{character.c@{character.c}!draw\_character@{draw\_character}}
+\index{draw\_character@{draw\_character}!character.c@{character.c}}
+\doxysubsubsection{\texorpdfstring{draw\_character()}{draw\_character()}}
+{\footnotesize\ttfamily void draw\+\_\+character (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_character}{Character}} $\ast$}]{character,  }\item[{bool}]{move }\end{DoxyParamCaption})}
+
+
+
+function that initizalizes the sprites of the character 
+
+
+\begin{DoxyParams}{Parameters}
+{\em character} & a pointer to an object of \mbox{\hyperlink{struct_character}{Character}} \\
+\hline
+{\em move} & if the character will be moving when drawn \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{character_8c_a0f0779cd7e3fc27f52ea7d1b1a043c0b}\label{character_8c_a0f0779cd7e3fc27f52ea7d1b1a043c0b}} 
+\index{character.c@{character.c}!draw\_character\_dying@{draw\_character\_dying}}
+\index{draw\_character\_dying@{draw\_character\_dying}!character.c@{character.c}}
+\doxysubsubsection{\texorpdfstring{draw\_character\_dying()}{draw\_character\_dying()}}
+{\footnotesize\ttfamily void draw\+\_\+character\+\_\+dying (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_character}{Character}} $\ast$}]{character }\end{DoxyParamCaption})}
+
+
+
+function that initizalizes the sprites of the character dying 
+
+
+\begin{DoxyParams}{Parameters}
+{\em character} & a pointer to an object of \mbox{\hyperlink{struct_character}{Character}} \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{character_8c_a3f8250fc679a36e9cd593110466a6239}\label{character_8c_a3f8250fc679a36e9cd593110466a6239}} 
+\index{character.c@{character.c}!draw\_character\_jumping@{draw\_character\_jumping}}
+\index{draw\_character\_jumping@{draw\_character\_jumping}!character.c@{character.c}}
+\doxysubsubsection{\texorpdfstring{draw\_character\_jumping()}{draw\_character\_jumping()}}
+{\footnotesize\ttfamily void draw\+\_\+character\+\_\+jumping (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_character}{Character}} $\ast$}]{character,  }\item[{bool}]{move }\end{DoxyParamCaption})}
+
+
+
+function that initizalizes the sprites of the character jumping 
+
+
+\begin{DoxyParams}{Parameters}
+{\em character} & a pointer to an object of \mbox{\hyperlink{struct_character}{Character}} \\
+\hline
+{\em move} & if the character will be moving when drawn \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{character_8c_a88df4ef694450cc3217bc07dfe4642aa}\label{character_8c_a88df4ef694450cc3217bc07dfe4642aa}} 
+\index{character.c@{character.c}!draw\_character\_running@{draw\_character\_running}}
+\index{draw\_character\_running@{draw\_character\_running}!character.c@{character.c}}
+\doxysubsubsection{\texorpdfstring{draw\_character\_running()}{draw\_character\_running()}}
+{\footnotesize\ttfamily void draw\+\_\+character\+\_\+running (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_character}{Character}} $\ast$}]{character,  }\item[{bool}]{move }\end{DoxyParamCaption})}
+
+
+
+function that initizalizes the sprites of the character running 
+
+
+\begin{DoxyParams}{Parameters}
+{\em character} & a pointer to an object of \mbox{\hyperlink{struct_character}{Character}} \\
+\hline
+{\em move} & if the character will be moving when drawn \\
+\hline
+\end{DoxyParams}

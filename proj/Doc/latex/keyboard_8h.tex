@@ -1,0 +1,77 @@
+\hypertarget{keyboard_8h}{}\doxysection{D\+:/\+Documentos/\+FEUP/3 ano/1 semestre/\+LCOM/g11/proj/keyboard.h File Reference}
+\label{keyboard_8h}\index{D:/Documentos/FEUP/3 ano/1 semestre/LCOM/g11/proj/keyboard.h@{D:/Documentos/FEUP/3 ano/1 semestre/LCOM/g11/proj/keyboard.h}}
+
+
+definition of the functions used to interact with the Keyboard  
+
+
+{\ttfamily \#include $<$lcom/lcf.\+h$>$}\newline
+{\ttfamily \#include $<$lcom/liblm.\+h$>$}\newline
+{\ttfamily \#include $<$lcom/proj.\+h$>$}\newline
+{\ttfamily \#include $<$stdbool.\+h$>$}\newline
+{\ttfamily \#include $<$stdint.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}i8042.\+h\char`\"{}}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{keyboard_8h_a8eee4d0a15beada731a514481b5ad4bf}{keyboard\+\_\+subscribe\+\_\+int}} (uint8\+\_\+t $\ast$bit\+\_\+no)
+\begin{DoxyCompactList}\small\item\em Subscribes keyboard interrupts. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{keyboard_8h_ac95aea27a5e91b363b876fed881f368f}{keyboard\+\_\+unsubscribe\+\_\+int}} ()
+\begin{DoxyCompactList}\small\item\em Unsubscribes keyboard interrupts. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{keyboard_8h_a6a2a6c2b64c950d09dbcc2cc52073e12}\label{keyboard_8h_a6a2a6c2b64c950d09dbcc2cc52073e12}} 
+void \mbox{\hyperlink{keyboard_8h_a6a2a6c2b64c950d09dbcc2cc52073e12}{keyboard\+\_\+ih}} ()
+\begin{DoxyCompactList}\small\item\em Handles Keyboard interrupts. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{keyboard_8h_a2e275e0181e92ac63a66b3e9b8bc75d1}{set\+\_\+keyboard\+\_\+default}} ()
+\begin{DoxyCompactList}\small\item\em Reenables the keyboard interrupts. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+definition of the functions used to interact with the Keyboard 
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{keyboard_8h_a8eee4d0a15beada731a514481b5ad4bf}\label{keyboard_8h_a8eee4d0a15beada731a514481b5ad4bf}} 
+\index{keyboard.h@{keyboard.h}!keyboard\_subscribe\_int@{keyboard\_subscribe\_int}}
+\index{keyboard\_subscribe\_int@{keyboard\_subscribe\_int}!keyboard.h@{keyboard.h}}
+\doxysubsubsection{\texorpdfstring{keyboard\_subscribe\_int()}{keyboard\_subscribe\_int()}}
+{\footnotesize\ttfamily int keyboard\+\_\+subscribe\+\_\+int (\begin{DoxyParamCaption}\item[{uint8\+\_\+t $\ast$}]{bit\+\_\+no }\end{DoxyParamCaption})}
+
+
+
+Subscribes keyboard interrupts. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em bit\+\_\+no} & number with Keyboard\textquotesingle{}s IRQ line \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 on success, 1 otherwise 
+\end{DoxyReturn}
+\mbox{\Hypertarget{keyboard_8h_ac95aea27a5e91b363b876fed881f368f}\label{keyboard_8h_ac95aea27a5e91b363b876fed881f368f}} 
+\index{keyboard.h@{keyboard.h}!keyboard\_unsubscribe\_int@{keyboard\_unsubscribe\_int}}
+\index{keyboard\_unsubscribe\_int@{keyboard\_unsubscribe\_int}!keyboard.h@{keyboard.h}}
+\doxysubsubsection{\texorpdfstring{keyboard\_unsubscribe\_int()}{keyboard\_unsubscribe\_int()}}
+{\footnotesize\ttfamily int keyboard\+\_\+unsubscribe\+\_\+int (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Unsubscribes keyboard interrupts. 
+
+\begin{DoxyReturn}{Returns}
+0 on success, 1 otherwise 
+\end{DoxyReturn}
+\mbox{\Hypertarget{keyboard_8h_a2e275e0181e92ac63a66b3e9b8bc75d1}\label{keyboard_8h_a2e275e0181e92ac63a66b3e9b8bc75d1}} 
+\index{keyboard.h@{keyboard.h}!set\_keyboard\_default@{set\_keyboard\_default}}
+\index{set\_keyboard\_default@{set\_keyboard\_default}!keyboard.h@{keyboard.h}}
+\doxysubsubsection{\texorpdfstring{set\_keyboard\_default()}{set\_keyboard\_default()}}
+{\footnotesize\ttfamily int set\+\_\+keyboard\+\_\+default (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Reenables the keyboard interrupts. 
+
+\begin{DoxyReturn}{Returns}
+0 upon success, 1 otherwise 
+\end{DoxyReturn}

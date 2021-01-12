@@ -1,0 +1,41 @@
+\hypertarget{game_8h}{}\doxysection{game.\+h File Reference}
+\label{game_8h}\index{game.h@{game.h}}
+
+
+This file contains the declarations for the implementations to start the game, containing $\ast$ the main loop.  
+
+
+{\ttfamily \#include $<$lcom/lcf.\+h$>$}\newline
+{\ttfamily \#include $<$lcom/liblm.\+h$>$}\newline
+{\ttfamily \#include $<$lcom/proj.\+h$>$}\newline
+{\ttfamily \#include $<$stdbool.\+h$>$}\newline
+{\ttfamily \#include $<$stdint.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}i8042.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}graphic.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}sprite.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}timer.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}keyboard.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}mouse.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}scenario.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}character.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}mushroom.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}birds\+\_\+and\+\_\+crystals.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}letters\+\_\+and\+\_\+numbers.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}scoreboard.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}rtc.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}menu.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}events.\+h\char`\"{}}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{game_8h_a94d15f07abafce7ee83bd9468836cf0b}\label{game_8h_a94d15f07abafce7ee83bd9468836cf0b}} 
+void \mbox{\hyperlink{game_8h_a94d15f07abafce7ee83bd9468836cf0b}{start\+\_\+dave\+\_\+the\+\_\+jumper}} ()
+\begin{DoxyCompactList}\small\item\em function that initializes all of the sprites and calls the main loop function \mbox{\hyperlink{game_8h_a7c0dfd6d419fb67565e597ba124f9a10}{game\+\_\+main\+\_\+loop()}} \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{game_8h_a7c0dfd6d419fb67565e597ba124f9a10}\label{game_8h_a7c0dfd6d419fb67565e597ba124f9a10}} 
+void \mbox{\hyperlink{game_8h_a7c0dfd6d419fb67565e597ba124f9a10}{game\+\_\+main\+\_\+loop}} ()
+\begin{DoxyCompactList}\small\item\em main loop of the game, using the driver receive funtion. Does the interruptions of the timer, keyboard and mouse. After the interruptions, calls the \mbox{\hyperlink{events_8c_ad03d38b728d8392ab0d9201950451788}{event\+\_\+handler()}} function if any event happened In the end of the loop, calls all of the \textquotesingle{}destroy\textquotesingle{} functions. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This file contains the declarations for the implementations to start the game, containing $\ast$ the main loop. 
+

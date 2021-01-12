@@ -1,0 +1,298 @@
+\hypertarget{i8042_8h}{}\doxysection{i8042.\+h File Reference}
+\label{i8042_8h}\index{i8042.h@{i8042.h}}
+
+
+Code with macros to use the keyboard and the mouse Constants for programming the i8254 Timer.  
+
+
+{\ttfamily \#include $<$lcom/lcf.\+h$>$}\newline
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{i8042_8h_a2d17911b50c0aeebb2e3325c5b36d4f2}\label{i8042_8h_a2d17911b50c0aeebb2e3325c5b36d4f2}} 
+\#define {\bfseries KEYBOARD\+\_\+\+IRQ}~1
+\item 
+\mbox{\Hypertarget{i8042_8h_a0a062af144d83732aa3a5854a57a49d3}\label{i8042_8h_a0a062af144d83732aa3a5854a57a49d3}} 
+\#define {\bfseries TWO\+\_\+\+BYTES\+\_\+\+SCANCODE}~0x\+E0
+\item 
+\mbox{\Hypertarget{i8042_8h_a62249e384b997229a3e2ae74ade334e2}\label{i8042_8h_a62249e384b997229a3e2ae74ade334e2}} 
+\#define {\bfseries DELAY}~20000
+\item 
+\mbox{\Hypertarget{i8042_8h_a89c4d098b53809674457b1660b1af780}\label{i8042_8h_a89c4d098b53809674457b1660b1af780}} 
+\#define {\bfseries STAT\+\_\+\+REG}~0x64
+\item 
+\mbox{\Hypertarget{i8042_8h_abf7206ca2181c36ef04b795c9b64e886}\label{i8042_8h_abf7206ca2181c36ef04b795c9b64e886}} 
+\#define {\bfseries CMD\+\_\+\+REG}~0x64
+\item 
+\mbox{\Hypertarget{i8042_8h_acfb42dde389e8ca36ab267002fbf5c6a}\label{i8042_8h_acfb42dde389e8ca36ab267002fbf5c6a}} 
+\#define {\bfseries OUT\+\_\+\+BUF}~0x60
+\item 
+\mbox{\Hypertarget{i8042_8h_a783be5698cf07b1daaf126ef89c19063}\label{i8042_8h_a783be5698cf07b1daaf126ef89c19063}} 
+\#define {\bfseries IN\+\_\+\+BUF}~0x60
+\item 
+\mbox{\Hypertarget{i8042_8h_af6996d12e71a534569c41a25de7d6d52}\label{i8042_8h_af6996d12e71a534569c41a25de7d6d52}} 
+\#define {\bfseries PARITY}~BIT(7)
+\item 
+\mbox{\Hypertarget{i8042_8h_a799517031a8334a42807b119bb456c53}\label{i8042_8h_a799517031a8334a42807b119bb456c53}} 
+\#define {\bfseries TIME\+\_\+\+OUT}~BIT(6)
+\item 
+\mbox{\Hypertarget{i8042_8h_a1b41fd2be63532d4ab910f8b256c3811}\label{i8042_8h_a1b41fd2be63532d4ab910f8b256c3811}} 
+\#define {\bfseries AUX}~BIT(5)
+\item 
+\mbox{\Hypertarget{i8042_8h_a3c48b10907056351582baf9f6478598e}\label{i8042_8h_a3c48b10907056351582baf9f6478598e}} 
+\#define {\bfseries IBF}~BIT(1)
+\item 
+\mbox{\Hypertarget{i8042_8h_a45967c9e25447ba853cf6fb4ac545fe6}\label{i8042_8h_a45967c9e25447ba853cf6fb4ac545fe6}} 
+\#define {\bfseries OBF}~BIT(0)
+\item 
+\mbox{\Hypertarget{i8042_8h_a21623e2a5501c821da54dd76ffc1d077}\label{i8042_8h_a21623e2a5501c821da54dd76ffc1d077}} 
+\#define {\bfseries READ\+\_\+\+CMD}~0x20
+\item 
+\mbox{\Hypertarget{i8042_8h_af792feb13ae0c1eab8f95f64c8baa96d}\label{i8042_8h_af792feb13ae0c1eab8f95f64c8baa96d}} 
+\#define {\bfseries WRITE\+\_\+\+CMD}~0x60
+\item 
+\mbox{\Hypertarget{i8042_8h_a55fefff08c94153a53592686472a6c80}\label{i8042_8h_a55fefff08c94153a53592686472a6c80}} 
+\#define {\bfseries CHECK\+\_\+\+KBC}~0x\+AA
+\item 
+\mbox{\Hypertarget{i8042_8h_a747b9afab82ec899413f5415da3d5c4e}\label{i8042_8h_a747b9afab82ec899413f5415da3d5c4e}} 
+\#define {\bfseries CHECK\+\_\+\+KBD\+\_\+\+INTERFACE}~0x\+AB
+\item 
+\mbox{\Hypertarget{i8042_8h_a13931a2abf4331f4851f505447dd6847}\label{i8042_8h_a13931a2abf4331f4851f505447dd6847}} 
+\#define {\bfseries DIS\+\_\+\+KBD\+\_\+\+INTERFACE}~0\+XAD
+\item 
+\mbox{\Hypertarget{i8042_8h_a632034ad4e2432cb0410fb352a22db48}\label{i8042_8h_a632034ad4e2432cb0410fb352a22db48}} 
+\#define {\bfseries EN\+\_\+\+KBD\+\_\+\+INTERFACE}~0x\+AE
+\item 
+\mbox{\Hypertarget{i8042_8h_ac6b47609a951e77244ef2be1691c298a}\label{i8042_8h_ac6b47609a951e77244ef2be1691c298a}} 
+\#define {\bfseries BREAK\+\_\+\+CODE}~BIT(7)
+\item 
+\mbox{\Hypertarget{i8042_8h_ac1464339e4d6f8f505ab230ae929ee0b}\label{i8042_8h_ac1464339e4d6f8f505ab230ae929ee0b}} 
+\#define {\bfseries DIS\+\_\+\+MOUSE\+\_\+\+INTER}~BIT(5)
+\item 
+\mbox{\Hypertarget{i8042_8h_a957b2c0a9740432c03debcb777b17ed2}\label{i8042_8h_a957b2c0a9740432c03debcb777b17ed2}} 
+\#define {\bfseries DIS\+\_\+\+KBD\+\_\+\+INTER}~BIT(4)
+\item 
+\mbox{\Hypertarget{i8042_8h_af9776e4566c3a77a7c3631530998f386}\label{i8042_8h_af9776e4566c3a77a7c3631530998f386}} 
+\#define {\bfseries EN\+\_\+\+MOUSE}~BIT(1)
+\item 
+\mbox{\Hypertarget{i8042_8h_a9e6ea2b423d7213db16c4975aaf38899}\label{i8042_8h_a9e6ea2b423d7213db16c4975aaf38899}} 
+\#define {\bfseries EN\+\_\+\+KBD}~BIT(0)
+\item 
+\mbox{\Hypertarget{i8042_8h_a4af1b6159e447ba72652bb7fcdfa726e}\label{i8042_8h_a4af1b6159e447ba72652bb7fcdfa726e}} 
+\#define {\bfseries ESC}~0x81
+\item 
+\mbox{\Hypertarget{i8042_8h_af4bced5cf8ed55746d4b5d34f9a0fe39}\label{i8042_8h_af4bced5cf8ed55746d4b5d34f9a0fe39}} 
+\#define {\bfseries ENTER}~0x1c
+\item 
+\mbox{\Hypertarget{i8042_8h_accb1b438d3d367c5d8e48c61a27efaf5}\label{i8042_8h_accb1b438d3d367c5d8e48c61a27efaf5}} 
+\#define {\bfseries SPACEBAR}~0x39
+\item 
+\mbox{\Hypertarget{i8042_8h_a629568514359445d2fbda71d70eeb1ce}\label{i8042_8h_a629568514359445d2fbda71d70eeb1ce}} 
+\#define {\bfseries BACKSPACE}~0x0e
+\item 
+\mbox{\Hypertarget{i8042_8h_ad315ce436b88e78c266532e4714dd197}\label{i8042_8h_ad315ce436b88e78c266532e4714dd197}} 
+\#define {\bfseries UP\+\_\+\+ARROW}~0x48
+\item 
+\mbox{\Hypertarget{i8042_8h_a5b1eca6358420b8748a151949d3119fa}\label{i8042_8h_a5b1eca6358420b8748a151949d3119fa}} 
+\#define {\bfseries DOWN\+\_\+\+ARROW}~0x50
+\item 
+\mbox{\Hypertarget{i8042_8h_a955f504eccf76b4eb2489c0adab03121}\label{i8042_8h_a955f504eccf76b4eb2489c0adab03121}} 
+\#define {\bfseries A}~0x1e
+\item 
+\mbox{\Hypertarget{i8042_8h_a111da81ae5883147168bbb8366377b10}\label{i8042_8h_a111da81ae5883147168bbb8366377b10}} 
+\#define {\bfseries B}~0x30
+\item 
+\mbox{\Hypertarget{i8042_8h_ac4cf4b2ab929bd23951a8676eeac086b}\label{i8042_8h_ac4cf4b2ab929bd23951a8676eeac086b}} 
+\#define {\bfseries C}~0x2e
+\item 
+\mbox{\Hypertarget{i8042_8h_af316c33cc298530f245e8b55330e86b5}\label{i8042_8h_af316c33cc298530f245e8b55330e86b5}} 
+\#define {\bfseries D}~0x20
+\item 
+\mbox{\Hypertarget{i8042_8h_a07484107e6d9fdf38b53edf631d6511d}\label{i8042_8h_a07484107e6d9fdf38b53edf631d6511d}} 
+\#define {\bfseries E}~0x12
+\item 
+\mbox{\Hypertarget{i8042_8h_a42257a545daf5b7933d6e8f96adc74f2}\label{i8042_8h_a42257a545daf5b7933d6e8f96adc74f2}} 
+\#define {\bfseries F}~0x21
+\item 
+\mbox{\Hypertarget{i8042_8h_aed9ea78689ecce0b7264c02c7f8a9a54}\label{i8042_8h_aed9ea78689ecce0b7264c02c7f8a9a54}} 
+\#define {\bfseries G}~0x22
+\item 
+\mbox{\Hypertarget{i8042_8h_abec92cc72a096640b821b8cd56a02495}\label{i8042_8h_abec92cc72a096640b821b8cd56a02495}} 
+\#define {\bfseries H}~0x23
+\item 
+\mbox{\Hypertarget{i8042_8h_a60ef6e1bcfabb95cfeb300e1d03ce470}\label{i8042_8h_a60ef6e1bcfabb95cfeb300e1d03ce470}} 
+\#define {\bfseries I}~0x17
+\item 
+\mbox{\Hypertarget{i8042_8h_ad59246fadffe0205c1ecfcd147c407f6}\label{i8042_8h_ad59246fadffe0205c1ecfcd147c407f6}} 
+\#define {\bfseries J}~0x24
+\item 
+\mbox{\Hypertarget{i8042_8h_a97d832ae23af4f215e801e37e4f94254}\label{i8042_8h_a97d832ae23af4f215e801e37e4f94254}} 
+\#define {\bfseries K}~0x25
+\item 
+\mbox{\Hypertarget{i8042_8h_aa73214aa5f2f94f63d90bb4e3d99fe53}\label{i8042_8h_aa73214aa5f2f94f63d90bb4e3d99fe53}} 
+\#define {\bfseries L}~0x26
+\item 
+\mbox{\Hypertarget{i8042_8h_a52037c938e3c1b126c6277da5ca689d0}\label{i8042_8h_a52037c938e3c1b126c6277da5ca689d0}} 
+\#define {\bfseries M}~0x32
+\item 
+\mbox{\Hypertarget{i8042_8h_a0240ac851181b84ac374872dc5434ee4}\label{i8042_8h_a0240ac851181b84ac374872dc5434ee4}} 
+\#define {\bfseries N}~0x31
+\item 
+\mbox{\Hypertarget{i8042_8h_a396fecfabe3105afc15a61c209f910f0}\label{i8042_8h_a396fecfabe3105afc15a61c209f910f0}} 
+\#define {\bfseries O}~0x18
+\item 
+\mbox{\Hypertarget{i8042_8h_a2748566f4c443ee77aa831e63dbb5ebe}\label{i8042_8h_a2748566f4c443ee77aa831e63dbb5ebe}} 
+\#define {\bfseries P}~0x19
+\item 
+\mbox{\Hypertarget{i8042_8h_acbcee443d6d55cb8600b3f240f5cf907}\label{i8042_8h_acbcee443d6d55cb8600b3f240f5cf907}} 
+\#define {\bfseries Q}~0x10
+\item 
+\mbox{\Hypertarget{i8042_8h_a5c71a5e59a53413cd6c270266d63b031}\label{i8042_8h_a5c71a5e59a53413cd6c270266d63b031}} 
+\#define {\bfseries R}~0x13
+\item 
+\mbox{\Hypertarget{i8042_8h_af933676109efed7ab34cea71d748a517}\label{i8042_8h_af933676109efed7ab34cea71d748a517}} 
+\#define {\bfseries S}~0x1f
+\item 
+\mbox{\Hypertarget{i8042_8h_a0acb682b8260ab1c60b918599864e2e5}\label{i8042_8h_a0acb682b8260ab1c60b918599864e2e5}} 
+\#define {\bfseries T}~0x14
+\item 
+\mbox{\Hypertarget{i8042_8h_affc9cbf86b78292bdb405361761c47f5}\label{i8042_8h_affc9cbf86b78292bdb405361761c47f5}} 
+\#define {\bfseries U}~0x16
+\item 
+\mbox{\Hypertarget{i8042_8h_af40a326b23c68a27cebe60f16634a2cb}\label{i8042_8h_af40a326b23c68a27cebe60f16634a2cb}} 
+\#define {\bfseries V}~0x2f
+\item 
+\mbox{\Hypertarget{i8042_8h_a649b8f01fd6c0f47ff3cbddaeba63bfb}\label{i8042_8h_a649b8f01fd6c0f47ff3cbddaeba63bfb}} 
+\#define {\bfseries W}~0x11
+\item 
+\mbox{\Hypertarget{i8042_8h_a207fd5507206d307cd63f95374fcd00d}\label{i8042_8h_a207fd5507206d307cd63f95374fcd00d}} 
+\#define {\bfseries X}~0x2d
+\item 
+\mbox{\Hypertarget{i8042_8h_a798e4073d613ca5ba9618e1b3253df14}\label{i8042_8h_a798e4073d613ca5ba9618e1b3253df14}} 
+\#define {\bfseries Y}~0x15
+\item 
+\mbox{\Hypertarget{i8042_8h_a51591cf51bdd6c1f6015532422e7770e}\label{i8042_8h_a51591cf51bdd6c1f6015532422e7770e}} 
+\#define {\bfseries Z}~0x2c
+\item 
+\mbox{\Hypertarget{i8042_8h_a986cf0caa693a9471be73cce8de54c13}\label{i8042_8h_a986cf0caa693a9471be73cce8de54c13}} 
+\#define {\bfseries ZERO1}~0x0b
+\item 
+\mbox{\Hypertarget{i8042_8h_acadfd5efe5512ca8ed79f3e10f47a503}\label{i8042_8h_acadfd5efe5512ca8ed79f3e10f47a503}} 
+\#define {\bfseries ONE1}~0x02
+\item 
+\mbox{\Hypertarget{i8042_8h_ac951ac6323836ba5f164afb4e36425d2}\label{i8042_8h_ac951ac6323836ba5f164afb4e36425d2}} 
+\#define {\bfseries TWO1}~0x03
+\item 
+\mbox{\Hypertarget{i8042_8h_a51303e3f4b008e6fee3b9bdc91de9d05}\label{i8042_8h_a51303e3f4b008e6fee3b9bdc91de9d05}} 
+\#define {\bfseries THREE1}~0x04
+\item 
+\mbox{\Hypertarget{i8042_8h_ae7f5c6566cc3b6a80e8b5fb0bea2ce30}\label{i8042_8h_ae7f5c6566cc3b6a80e8b5fb0bea2ce30}} 
+\#define {\bfseries FOUR1}~0x05
+\item 
+\mbox{\Hypertarget{i8042_8h_a0663248d3cae813c38d0a968dbe63e95}\label{i8042_8h_a0663248d3cae813c38d0a968dbe63e95}} 
+\#define {\bfseries FIVE1}~0x06
+\item 
+\mbox{\Hypertarget{i8042_8h_aecc9c40a5dececc399e06e64d478d149}\label{i8042_8h_aecc9c40a5dececc399e06e64d478d149}} 
+\#define {\bfseries SIX1}~0x07
+\item 
+\mbox{\Hypertarget{i8042_8h_a6de4d14479924d023cf10ae3cfafb8b4}\label{i8042_8h_a6de4d14479924d023cf10ae3cfafb8b4}} 
+\#define {\bfseries SEVEN1}~0x08
+\item 
+\mbox{\Hypertarget{i8042_8h_adb6f7f7e0183c3e366702203d9e68513}\label{i8042_8h_adb6f7f7e0183c3e366702203d9e68513}} 
+\#define {\bfseries EIGHT1}~0x09
+\item 
+\mbox{\Hypertarget{i8042_8h_a25fcf8dc74ddc9ee876148126bb01c29}\label{i8042_8h_a25fcf8dc74ddc9ee876148126bb01c29}} 
+\#define {\bfseries NINE1}~0x0a
+\item 
+\mbox{\Hypertarget{i8042_8h_a3aecf639d87e1a892beaadd65d15e0df}\label{i8042_8h_a3aecf639d87e1a892beaadd65d15e0df}} 
+\#define {\bfseries ZERO2}~0x52
+\item 
+\mbox{\Hypertarget{i8042_8h_a9c41c234e62e2b6168859440042213a2}\label{i8042_8h_a9c41c234e62e2b6168859440042213a2}} 
+\#define {\bfseries ONE2}~0x4f
+\item 
+\mbox{\Hypertarget{i8042_8h_aabb649dfc8b0c56a4424a742c8fc8bf6}\label{i8042_8h_aabb649dfc8b0c56a4424a742c8fc8bf6}} 
+\#define {\bfseries TWO2}~0x50
+\item 
+\mbox{\Hypertarget{i8042_8h_a13e052fe2dc554e22a3298f354339267}\label{i8042_8h_a13e052fe2dc554e22a3298f354339267}} 
+\#define {\bfseries THREE2}~0x51
+\item 
+\mbox{\Hypertarget{i8042_8h_a6fd65a66594dfa25f13d348be3d5edff}\label{i8042_8h_a6fd65a66594dfa25f13d348be3d5edff}} 
+\#define {\bfseries FOUR2}~0x4b
+\item 
+\mbox{\Hypertarget{i8042_8h_af877738ee89a4dc089c3f179f9ff4a75}\label{i8042_8h_af877738ee89a4dc089c3f179f9ff4a75}} 
+\#define {\bfseries FIVE2}~0x4c
+\item 
+\mbox{\Hypertarget{i8042_8h_a547ca5b851ad69c33a0396d9e6f1f774}\label{i8042_8h_a547ca5b851ad69c33a0396d9e6f1f774}} 
+\#define {\bfseries SIX2}~0x4d
+\item 
+\mbox{\Hypertarget{i8042_8h_a3bff8103c0842fdc927d9839a5d8a335}\label{i8042_8h_a3bff8103c0842fdc927d9839a5d8a335}} 
+\#define {\bfseries SEVEN2}~0x47
+\item 
+\mbox{\Hypertarget{i8042_8h_a18a263c522f00ddb48eb46b6000092ce}\label{i8042_8h_a18a263c522f00ddb48eb46b6000092ce}} 
+\#define {\bfseries EIGHT2}~0x48
+\item 
+\mbox{\Hypertarget{i8042_8h_a68423191cb9e26a70084d810c3270df7}\label{i8042_8h_a68423191cb9e26a70084d810c3270df7}} 
+\#define {\bfseries NINE2}~0x49
+\item 
+\mbox{\Hypertarget{i8042_8h_a85964cb90343bb1a029b1d1b4229f910}\label{i8042_8h_a85964cb90343bb1a029b1d1b4229f910}} 
+\#define {\bfseries MOUSE\+\_\+\+IRQ}~12
+\item 
+\mbox{\Hypertarget{i8042_8h_a9483325cfde3ce999ec61b88d07a73b6}\label{i8042_8h_a9483325cfde3ce999ec61b88d07a73b6}} 
+\#define {\bfseries MOUSE\+\_\+\+IRQ\+\_\+\+PIC2}~4
+\item 
+\mbox{\Hypertarget{i8042_8h_acc55daa58d88a3612f2ef74a6abbe97f}\label{i8042_8h_acc55daa58d88a3612f2ef74a6abbe97f}} 
+\#define {\bfseries LB}~BIT(0)
+\item 
+\mbox{\Hypertarget{i8042_8h_a171160a766f85c8816b898ed24d28408}\label{i8042_8h_a171160a766f85c8816b898ed24d28408}} 
+\#define {\bfseries RB}~BIT(1)
+\item 
+\mbox{\Hypertarget{i8042_8h_aa6b38d492364d98453284934ed7caee9}\label{i8042_8h_aa6b38d492364d98453284934ed7caee9}} 
+\#define {\bfseries MB}~BIT(2)
+\item 
+\mbox{\Hypertarget{i8042_8h_ad9b9b1e1afc532f72e8bb40ebf7fae94}\label{i8042_8h_ad9b9b1e1afc532f72e8bb40ebf7fae94}} 
+\#define {\bfseries X\+\_\+\+MSB}~BIT(4)
+\item 
+\mbox{\Hypertarget{i8042_8h_a35f6b5a181cf847d17c42176acdfd0ff}\label{i8042_8h_a35f6b5a181cf847d17c42176acdfd0ff}} 
+\#define {\bfseries Y\+\_\+\+MSB}~BIT(5)
+\item 
+\mbox{\Hypertarget{i8042_8h_ae2c4c6b26ddcdd376d41a1c3d0d1dcad}\label{i8042_8h_ae2c4c6b26ddcdd376d41a1c3d0d1dcad}} 
+\#define {\bfseries X\+\_\+\+OV}~BIT(6)
+\item 
+\mbox{\Hypertarget{i8042_8h_aff2cd26544dd1055669ad11e69a70a99}\label{i8042_8h_aff2cd26544dd1055669ad11e69a70a99}} 
+\#define {\bfseries Y\+\_\+\+OV}~BIT(7)
+\item 
+\mbox{\Hypertarget{i8042_8h_a8d406d5aff787991429e62cfd9bac721}\label{i8042_8h_a8d406d5aff787991429e62cfd9bac721}} 
+\#define {\bfseries READ\+\_\+\+DATA}~0x\+EB
+\item 
+\mbox{\Hypertarget{i8042_8h_ab3919f33b46e0808c4ed1c56a6a423f2}\label{i8042_8h_ab3919f33b46e0808c4ed1c56a6a423f2}} 
+\#define {\bfseries STREAM\+\_\+\+MODE}~0x\+EA
+\item 
+\mbox{\Hypertarget{i8042_8h_a1c22608f41bd715500d0333001079a8a}\label{i8042_8h_a1c22608f41bd715500d0333001079a8a}} 
+\#define {\bfseries ENABLE\+\_\+\+DATA\+\_\+\+REPORT}~0x\+F4
+\item 
+\mbox{\Hypertarget{i8042_8h_ad374b510092499b5961d3771abf9c66e}\label{i8042_8h_ad374b510092499b5961d3771abf9c66e}} 
+\#define {\bfseries DISABLE\+\_\+\+DATA\+\_\+\+REPORT}~0x\+F5
+\item 
+\mbox{\Hypertarget{i8042_8h_a17981ca5836957abd2dfe6b77d96744d}\label{i8042_8h_a17981ca5836957abd2dfe6b77d96744d}} 
+\#define {\bfseries REMOTE\+\_\+\+MODE}~0x\+F0
+\item 
+\mbox{\Hypertarget{i8042_8h_a6f6489887e08bff4887d0bc5dcf214d8}\label{i8042_8h_a6f6489887e08bff4887d0bc5dcf214d8}} 
+\#define {\bfseries ACK}~0x\+FA
+\item 
+\mbox{\Hypertarget{i8042_8h_a958518a45b12053ae33606ee7cb68a55}\label{i8042_8h_a958518a45b12053ae33606ee7cb68a55}} 
+\#define {\bfseries NACK}~0x\+FE
+\item 
+\mbox{\Hypertarget{i8042_8h_a8fe83ac76edc595f6b98cd4a4127aed5}\label{i8042_8h_a8fe83ac76edc595f6b98cd4a4127aed5}} 
+\#define {\bfseries ERROR}~0x\+FC
+\item 
+\mbox{\Hypertarget{i8042_8h_a0fcdbd39ed7dcf62fede44082d09cb7a}\label{i8042_8h_a0fcdbd39ed7dcf62fede44082d09cb7a}} 
+\#define {\bfseries WRITE\+\_\+\+BYTE\+\_\+\+TO\+\_\+\+MOUSE}~0x\+D4
+\item 
+\mbox{\Hypertarget{i8042_8h_a8c730a41dcccce68039aea9f991e1868}\label{i8042_8h_a8c730a41dcccce68039aea9f991e1868}} 
+\#define {\bfseries ATTEMPTS}~10
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Code with macros to use the keyboard and the mouse Constants for programming the i8254 Timer. 
+

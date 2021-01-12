@@ -1,0 +1,63 @@
+\hypertarget{scoreboard_8h}{}\doxysection{scoreboard.\+h File Reference}
+\label{scoreboard_8h}\index{scoreboard.h@{scoreboard.h}}
+
+
+Code used to define the implementations of the scoreboard.  
+
+
+{\ttfamily \#include $<$lcom/lcf.\+h$>$}\newline
+{\ttfamily \#include $<$lcom/liblm.\+h$>$}\newline
+{\ttfamily \#include $<$lcom/proj.\+h$>$}\newline
+{\ttfamily \#include $<$stdbool.\+h$>$}\newline
+{\ttfamily \#include $<$stdint.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}letters\+\_\+and\+\_\+numbers.\+h\char`\"{}}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{scoreboard_8h_a05d90ef179c465198b0ed966f00e5a3f}{register\+\_\+score}} (int points, char $\ast$name, int day, int month, int year, int hours, int minutes)
+\begin{DoxyCompactList}\small\item\em if the points of the player is higher than one from de record\+\_\+score array, it will be registered in the array \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{scoreboard_8h_afc0579558007ad687994086892956928}\label{scoreboard_8h_afc0579558007ad687994086892956928}} 
+void \mbox{\hyperlink{scoreboard_8h_afc0579558007ad687994086892956928}{write\+\_\+top5\+\_\+in\+\_\+the\+\_\+screen}} ()
+\begin{DoxyCompactList}\small\item\em write the top 5 scores in the screen \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{scoreboard_8h_a5f24c21f58349cbc5aa7425cbe8cc04c}\label{scoreboard_8h_a5f24c21f58349cbc5aa7425cbe8cc04c}} 
+void \mbox{\hyperlink{scoreboard_8h_a5f24c21f58349cbc5aa7425cbe8cc04c}{write\+\_\+scores\+\_\+to\+\_\+file}} ()
+\begin{DoxyCompactList}\small\item\em write the scores to a file \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{scoreboard_8h_ad0d0fad132234f94d38213ed7cb73867}\label{scoreboard_8h_ad0d0fad132234f94d38213ed7cb73867}} 
+void \mbox{\hyperlink{scoreboard_8h_ad0d0fad132234f94d38213ed7cb73867}{read\+\_\+scores\+\_\+from\+\_\+file}} ()
+\begin{DoxyCompactList}\small\item\em read the scores from a file \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Code used to define the implementations of the scoreboard. 
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{scoreboard_8h_a05d90ef179c465198b0ed966f00e5a3f}\label{scoreboard_8h_a05d90ef179c465198b0ed966f00e5a3f}} 
+\index{scoreboard.h@{scoreboard.h}!register\_score@{register\_score}}
+\index{register\_score@{register\_score}!scoreboard.h@{scoreboard.h}}
+\doxysubsubsection{\texorpdfstring{register\_score()}{register\_score()}}
+{\footnotesize\ttfamily void register\+\_\+score (\begin{DoxyParamCaption}\item[{int}]{points,  }\item[{char $\ast$}]{name,  }\item[{int}]{day,  }\item[{int}]{month,  }\item[{int}]{year,  }\item[{int}]{hours,  }\item[{int}]{minutes }\end{DoxyParamCaption})}
+
+
+
+if the points of the player is higher than one from de record\+\_\+score array, it will be registered in the array 
+
+
+\begin{DoxyParams}{Parameters}
+{\em points} & points made by the player \\
+\hline
+{\em name} & name of the player \\
+\hline
+{\em day} & day of the play \\
+\hline
+{\em month} & month of the play \\
+\hline
+{\em year} & year of the play \\
+\hline
+{\em hour} & hour of the play \\
+\hline
+{\em minutes} & minute of the play \\
+\hline
+\end{DoxyParams}

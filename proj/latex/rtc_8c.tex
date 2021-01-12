@@ -1,0 +1,103 @@
+\hypertarget{rtc_8c}{}\doxysection{rtc.\+c File Reference}
+\label{rtc_8c}\index{rtc.c@{rtc.c}}
+
+
+This file contains the implementation of the rtc, used to get the day and time the game was played.  
+
+
+{\ttfamily \#include \char`\"{}rtc.\+h\char`\"{}}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{rtc_8c_a1fe1100ebe9891f425bd9ab9ececb327}{read\+\_\+register}} ()
+\begin{DoxyCompactList}\small\item\em This functions reads a register from the RTC. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{rtc_8c_a91994172a375afa5dfd71c7ee92e93a1}{is\+BCD}} ()
+\begin{DoxyCompactList}\small\item\em This function checks if the RTC is in the BCD format. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{rtc_8c_afc881a018edf34d327081ee6f8110a75}{bcd\+\_\+to\+\_\+dec}} (uint8\+\_\+t $\ast$bcd)
+\begin{DoxyCompactList}\small\item\em if the RTC is in BCD format,the function convert it to decimal \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{rtc_8c_affb6f9c7b2c1d585677a5bba1da35c06}\label{rtc_8c_affb6f9c7b2c1d585677a5bba1da35c06}} 
+void \mbox{\hyperlink{rtc_8c_affb6f9c7b2c1d585677a5bba1da35c06}{get\+Date}} ()
+\begin{DoxyCompactList}\small\item\em gets the current date from the RTC in binary. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{rtc_8c_a1c7c164fd3c7dea7004ece3c6251fc94}\label{rtc_8c_a1c7c164fd3c7dea7004ece3c6251fc94}} 
+void \mbox{\hyperlink{rtc_8c_a1c7c164fd3c7dea7004ece3c6251fc94}{get\+Time}} ()
+\begin{DoxyCompactList}\small\item\em gets the current time from the RTC in binary. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{rtc_8c_a9c6bdc4b28d4e8ac2a89fff54e2bfa69}\label{rtc_8c_a9c6bdc4b28d4e8ac2a89fff54e2bfa69}} 
+uint8\+\_\+t \mbox{\hyperlink{rtc_8c_a9c6bdc4b28d4e8ac2a89fff54e2bfa69}{player\+\_\+day}} = 99
+\begin{DoxyCompactList}\small\item\em represents the day, given by the rtc \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{rtc_8c_a20a776201bf6da045b7d1f4afe9fe3c7}\label{rtc_8c_a20a776201bf6da045b7d1f4afe9fe3c7}} 
+uint8\+\_\+t \mbox{\hyperlink{rtc_8c_a20a776201bf6da045b7d1f4afe9fe3c7}{player\+\_\+month}} = 99
+\begin{DoxyCompactList}\small\item\em represents the month, given by the rtc \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{rtc_8c_ad38d22e3d716dd8ff3b16a5b055253b8}\label{rtc_8c_ad38d22e3d716dd8ff3b16a5b055253b8}} 
+uint8\+\_\+t \mbox{\hyperlink{rtc_8c_ad38d22e3d716dd8ff3b16a5b055253b8}{player\+\_\+year}} = 99
+\begin{DoxyCompactList}\small\item\em represents the year, given by the rtc \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{rtc_8c_a3973b5f6ada518b81524d5dfde6e2416}\label{rtc_8c_a3973b5f6ada518b81524d5dfde6e2416}} 
+uint8\+\_\+t \mbox{\hyperlink{rtc_8c_a3973b5f6ada518b81524d5dfde6e2416}{player\+\_\+hour}} = 99
+\begin{DoxyCompactList}\small\item\em represents the hour, given by the rtc \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{rtc_8c_ad2b827dab83c13c4ccfa13514e24c2eb}{player\+\_\+minute}} = 99
+\begin{DoxyCompactList}\small\item\em represents the minute, given by the rtc \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This file contains the implementation of the rtc, used to get the day and time the game was played. 
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{rtc_8c_afc881a018edf34d327081ee6f8110a75}\label{rtc_8c_afc881a018edf34d327081ee6f8110a75}} 
+\index{rtc.c@{rtc.c}!bcd\_to\_dec@{bcd\_to\_dec}}
+\index{bcd\_to\_dec@{bcd\_to\_dec}!rtc.c@{rtc.c}}
+\doxysubsubsection{\texorpdfstring{bcd\_to\_dec()}{bcd\_to\_dec()}}
+{\footnotesize\ttfamily void bcd\+\_\+to\+\_\+dec (\begin{DoxyParamCaption}\item[{uint8\+\_\+t $\ast$}]{bcd }\end{DoxyParamCaption})}
+
+
+
+if the RTC is in BCD format,the function convert it to decimal 
+
+
+\begin{DoxyParams}{Parameters}
+{\em bcd} & Number in BCD format to be converted \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{rtc_8c_a91994172a375afa5dfd71c7ee92e93a1}\label{rtc_8c_a91994172a375afa5dfd71c7ee92e93a1}} 
+\index{rtc.c@{rtc.c}!isBCD@{isBCD}}
+\index{isBCD@{isBCD}!rtc.c@{rtc.c}}
+\doxysubsubsection{\texorpdfstring{isBCD()}{isBCD()}}
+{\footnotesize\ttfamily bool is\+BCD (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+This function checks if the RTC is in the BCD format. 
+
+\begin{DoxyReturn}{Returns}
+int true in case of success, false otherwise 
+\end{DoxyReturn}
+\mbox{\Hypertarget{rtc_8c_a1fe1100ebe9891f425bd9ab9ececb327}\label{rtc_8c_a1fe1100ebe9891f425bd9ab9ececb327}} 
+\index{rtc.c@{rtc.c}!read\_register@{read\_register}}
+\index{read\_register@{read\_register}!rtc.c@{rtc.c}}
+\doxysubsubsection{\texorpdfstring{read\_register()}{read\_register()}}
+{\footnotesize\ttfamily int read\+\_\+register (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+This functions reads a register from the RTC. 
+
+\begin{DoxyReturn}{Returns}
+int 0 in case of success, 1 otherwise 
+\end{DoxyReturn}
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{rtc_8c_ad2b827dab83c13c4ccfa13514e24c2eb}\label{rtc_8c_ad2b827dab83c13c4ccfa13514e24c2eb}} 
+\index{rtc.c@{rtc.c}!player\_minute@{player\_minute}}
+\index{player\_minute@{player\_minute}!rtc.c@{rtc.c}}
+\doxysubsubsection{\texorpdfstring{player\_minute}{player\_minute}}
+{\footnotesize\ttfamily uint8\+\_\+t player\+\_\+minute = 99}
+
+
+
+represents the minute, given by the rtc 
+
+represents the minutes, given by the rtc 
